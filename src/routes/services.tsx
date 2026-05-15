@@ -5,9 +5,9 @@ import { ArrowRight, Megaphone, Calendar, Sparkles, Camera, Lightbulb, Globe2 } 
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Services — First Solutions" },
+      { title: "Services — The First Step Solutions" },
       { name: "description", content: "Brand activation, corporate events, MICE, weddings, creative production and digital experiences — six disciplines, one studio." },
-      { property: "og:title", content: "Services — First Solutions" },
+      { property: "og:title", content: "Services — The First Step Solutions" },
       { property: "og:description", content: "Six disciplines, one creative powerhouse." },
     ],
   }),

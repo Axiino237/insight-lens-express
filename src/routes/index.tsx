@@ -12,9 +12,9 @@ import work6 from "@/assets/work-6.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "First Solutions — Ideas. Innovation. Impact." },
+      { title: "The First Step Solutions — Ideas. Innovation. Impact." },
       { name: "description", content: "Award-winning event management & brand experience agency. Corporate events, brand activations, conferences, weddings & integrated communication." },
-      { property: "og:title", content: "First Solutions — Ideas. Innovation. Impact." },
+      { property: "og:title", content: "The First Step Solutions — Ideas. Innovation. Impact." },
       { property: "og:description", content: "We turn ideas into experiences that move people and build brands." },
     ],
   }),
@@ -76,7 +76,7 @@ function Home() {
           </h1>
 
           <p className="mt-8 max-w-2xl text-lg md:text-xl text-muted-foreground leading-relaxed">
-            First Solutions is a full-service brand experience & event company.
+            The First Step Solutions is a full-service brand experience & event company.
             From intimate launches to 50,000-strong spectacles — we design,
             produce and execute every moment.
           </p>
@@ -216,7 +216,7 @@ function Home() {
             ))}
           </div>
           <p className="font-display text-2xl md:text-4xl font-semibold leading-tight">
-            "First Solutions didn't just produce our 10-year summit — they
+            "The First Step Solutions didn't just produce our 10-year summit — they
             choreographed an <span className="text-gradient-brand">emotional standing ovation</span> from
             2,400 employees. We are still feeling the impact."
           </p>
