@@ -18,9 +18,9 @@ export function Header() {
     <header className="fixed top-0 inset-x-0 z-50">
       <div className="mx-auto mt-4 max-w-7xl px-4">
         <div className="glass rounded-2xl flex items-center justify-between px-4 py-3 md:px-6">
-          <Link to="/" className="flex items-center gap-2">
-            <img src={logo} alt="First Solutions logo" className="h-10 w-auto" />
-            <span className="hidden sm:block font-display font-bold text-lg leading-none">
+          <Link to="/" className="flex items-center gap-3">
+            <img src={logo} alt="First Solutions logo" className="h-16 md:h-20 w-auto" />
+            <span className="font-display font-bold text-xl md:text-2xl leading-none whitespace-nowrap">
               <span className="text-gradient-warm">First</span>{" "}
               <span className="text-brand-cyan">Solutions</span>
             </span>
