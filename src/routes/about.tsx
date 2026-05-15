@@ -5,9 +5,9 @@ import { ArrowRight } from "lucide-react";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — First Solutions" },
-      { name: "description", content: "Learn about First Solutions — a brand experience agency built on ideas, innovation and impact." },
-      { property: "og:title", content: "About — First Solutions" },
+      { title: "About — The First Step Solutions" },
+      { name: "description", content: "Learn about The First Step Solutions — a brand experience agency built on ideas, innovation and impact." },
+      { property: "og:title", content: "About — The First Step Solutions" },
       { property: "og:description", content: "Eleven years. Six cities. One obsession — unforgettable experiences." },
     ],
   }),
@@ -36,7 +36,7 @@ function About() {
             obsessed with <span className="text-gradient-brand">the live moment.</span>
           </h1>
           <p className="mt-8 max-w-3xl text-lg text-muted-foreground leading-relaxed">
-            First Solutions started in 2014 with three people, a borrowed laptop
+            The First Step Solutions started in 2014 with three people, a borrowed laptop
             and a stubborn belief: live experiences are the most powerful storytelling
             medium on earth. Eleven years on, we're a 90-strong team of producers,
             designers, technologists and dreamers — building moments that brands

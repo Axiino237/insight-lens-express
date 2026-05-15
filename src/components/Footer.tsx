@@ -9,9 +9,10 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-4">
           <div className="md:col-span-2">
             <div className="flex items-center gap-3">
-              <img src={logo} alt="First Solutions" className="h-12 w-auto" />
+              <img src={logo} alt="The First Step Solutions" className="h-12 w-auto" />
               <span className="font-display font-bold text-xl">
-                <span className="text-gradient-warm">First</span>{" "}
+                <span className="text-muted-foreground">The</span>{" "}
+                <span className="text-gradient-warm">First Step</span>{" "}
                 <span className="text-brand-cyan">Solutions</span>
               </span>
             </div>
@@ -49,7 +50,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 pt-6 border-t border-border/40 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
-          <p>© {new Date().getFullYear()} First Solutions. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} The First Step Solutions. All rights reserved.</p>
           <p>Ideas · Innovation · Impact</p>
         </div>
       </div>

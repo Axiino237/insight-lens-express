@@ -10,9 +10,9 @@ import work6 from "@/assets/work-6.jpg";
 export const Route = createFileRoute("/work")({
   head: () => ({
     meta: [
-      { title: "Our Work — First Solutions" },
+      { title: "Our Work — The First Step Solutions" },
       { name: "description", content: "Selected projects: activations, conferences, awards, festivals, weddings and product launches." },
-      { property: "og:title", content: "Our Work — First Solutions" },
+      { property: "og:title", content: "Our Work — The First Step Solutions" },
       { property: "og:description", content: "Stories we've brought to life." },
     ],
   }),
