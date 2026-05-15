@@ -1,14 +1,12 @@
-import { Outlet } from "@tanstack/react-router";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
+import type { ReactNode } from "react";
 
-export function Layout() {
+export function Layout({ children }: { children: ReactNode }) {
   return (
     <div className="min-h-screen flex flex-col bg-background text-foreground">
       <Header />
-      <main className="flex-1 pt-28">
-        <Outlet />
-      </main>
+      <main className="flex-1 pt-28">{children}</main>
       <Footer />
     </div>
   );
