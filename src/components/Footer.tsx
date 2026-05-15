@@ -11,7 +11,8 @@ export function Footer() {
             <div className="flex items-center gap-3">
               <img src={logo} alt="The First Step Solutions" className="h-12 w-auto" />
               <span className="font-display font-bold text-xl">
-                <span className="text-gradient-warm">First</span>{" "}
+                <span className="text-muted-foreground">The</span>{" "}
+                <span className="text-gradient-warm">First Step</span>{" "}
                 <span className="text-brand-cyan">Solutions</span>
               </span>
             </div>

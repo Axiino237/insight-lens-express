@@ -20,8 +20,9 @@ export function Header() {
         <div className="glass rounded-2xl flex items-center justify-between px-4 py-3 md:px-6">
           <Link to="/" className="flex items-center gap-3">
             <img src={logo} alt="The First Step Solutions logo" className="h-16 md:h-20 w-auto" />
-            <span className="font-display font-bold text-xl md:text-2xl leading-none whitespace-nowrap">
-              <span className="text-gradient-warm">First</span>{" "}
+            <span className="font-display font-bold text-base md:text-xl leading-tight whitespace-nowrap">
+              <span className="text-muted-foreground">The</span>{" "}
+              <span className="text-gradient-warm">First Step</span>{" "}
               <span className="text-brand-cyan">Solutions</span>
             </span>
           </Link>
