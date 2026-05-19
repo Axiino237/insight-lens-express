@@ -51,7 +51,17 @@ export function Footer() {
 
         <div className="mt-12 pt-6 border-t border-border/40 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
           <p>© {new Date().getFullYear()} The First Step Solutions. All rights reserved.</p>
-          <p>Ideas · Innovation · Impact</p>
+          <p>
+            Developed by{" "}
+            <a
+              href="https://axiino.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-gradient-warm hover:opacity-80 transition"
+            >
+              Axiino
+            </a>
+          </p>
         </div>
       </div>
     </footer>
