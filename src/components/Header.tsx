@@ -40,12 +40,22 @@ export function Header() {
             ))}
           </nav>
 
-          <Link
-            to="/contact"
-            className="hidden md:inline-flex items-center justify-center rounded-full bg-gradient-warm px-5 py-2.5 text-sm font-semibold text-white shadow-glow hover:opacity-90 transition"
-          >
-            Let's Talk
-          </Link>
+          <div className="hidden md:flex items-center gap-2">
+            <a
+              href="https://wizcraft.co/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-4 py-2.5 text-sm font-semibold text-foreground hover:bg-white/10 transition"
+            >
+              Our Group
+            </a>
+            <Link
+              to="/contact"
+              className="inline-flex items-center justify-center rounded-full bg-gradient-warm px-5 py-2.5 text-sm font-semibold text-white shadow-glow hover:opacity-90 transition"
+            >
+              Let's Talk
+            </Link>
+          </div>
 
           <button
             onClick={() => setOpen((v) => !v)}
@@ -68,6 +78,15 @@ export function Header() {
                 {n.label}
               </Link>
             ))}
+            <a
+              href="https://wizcraft.co/"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setOpen(false)}
+              className="mt-2 inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-foreground"
+            >
+              Our Group
+            </a>
             <Link
               to="/contact"
               onClick={() => setOpen(false)}
