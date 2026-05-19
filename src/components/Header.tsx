@@ -49,7 +49,7 @@ export function Header() {
             >
               <span className="inline-flex items-center gap-2 rounded-full bg-background/80 backdrop-blur px-4 py-2 text-sm font-semibold text-foreground group-hover:bg-background/60 transition-colors">
                 <span className="h-2 w-2 rounded-full bg-brand-cyan animate-pulse" />
-                Visit Parent Group
+                Go to the Tree
                 <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </span>
             </a>
@@ -89,7 +89,7 @@ export function Header() {
               onClick={() => setOpen(false)}
               className="mt-2 inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-foreground"
             >
-              Our Group
+              Go to the Tree
             </a>
             <Link
               to="/contact"
