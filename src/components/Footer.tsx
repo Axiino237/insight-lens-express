@@ -9,7 +9,7 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-4">
           <div className="md:col-span-2">
             <div className="flex items-center gap-3">
-              <img src={logo} alt="The First Step Solutions" className="h-12 w-auto" />
+              <img src={logo} alt="The First Step Solutions" className="h-8 w-auto" />
               <span className="font-display font-bold text-xl">
                 <span className="text-muted-foreground">The</span>{" "}
                 <span className="text-gradient-warm">First Step</span>{" "}

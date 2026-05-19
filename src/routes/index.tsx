@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout } from "@/components/Layout";
 import { ArrowRight, Sparkles, Megaphone, Calendar, Camera, Lightbulb, Globe2, Star } from "lucide-react";
+import { ThreeDModel } from "@/components/ThreeDModel";
 import heroEvent from "@/assets/hero-event.jpg";
 import work1 from "@/assets/work-1.jpg";
 import work2 from "@/assets/work-2.jpg";
@@ -60,41 +61,49 @@ function Home() {
         </div>
 
         <div className="relative mx-auto max-w-7xl px-4 py-24 md:py-36">
-          <div className="flex items-center gap-2 mb-8">
-            <span className="h-2 w-2 rounded-full bg-brand-magenta animate-pulse" />
-            <span className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
-              Est. 2014 · Chennai · Mumbai · Bengaluru · Dubai
-            </span>
-          </div>
+          <div className="grid gap-12 lg:grid-cols-12 lg:items-center">
+            <div className="lg:col-span-7">
+              <div className="flex items-center gap-2 mb-8">
+                <span className="h-2 w-2 rounded-full bg-brand-magenta animate-pulse" />
+                <span className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
+                  Est. 2014 · Chennai · Mumbai · Bengaluru · Dubai
+                </span>
+              </div>
 
-          <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-extrabold leading-[0.95] max-w-5xl">
-            We turn <span className="text-gradient-warm">ideas</span>
-            <br />
-            into <span className="text-gradient-brand">experiences</span>
-            <br />
-            that <span className="text-brand-cyan">move people.</span>
-          </h1>
+              <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-extrabold leading-[0.95] max-w-5xl">
+                We turn <span className="text-gradient-warm">ideas</span>
+                <br />
+                into <span className="text-gradient-brand">experiences</span>
+                <br />
+                that <span className="text-brand-cyan">move people.</span>
+              </h1>
 
-          <p className="mt-8 max-w-2xl text-lg md:text-xl text-muted-foreground leading-relaxed">
-            The First Step Solutions is a full-service brand experience & event company.
-            From intimate launches to 50,000-strong spectacles — we design,
-            produce and execute every moment.
-          </p>
+              <p className="mt-8 max-w-2xl text-lg md:text-xl text-muted-foreground leading-relaxed">
+                The First Step Solutions is a full-service brand experience & event company.
+                From intimate launches to 50,000-strong spectacles — we design,
+                produce and execute every moment.
+              </p>
 
-          <div className="mt-10 flex flex-wrap gap-4">
-            <Link
-              to="/contact"
-              className="group inline-flex items-center gap-2 rounded-full bg-gradient-warm px-7 py-4 text-base font-semibold text-white shadow-glow hover:opacity-90 transition"
-            >
-              Plan Your Event
-              <ArrowRight size={18} className="group-hover:translate-x-1 transition" />
-            </Link>
-            <Link
-              to="/work"
-              className="inline-flex items-center gap-2 rounded-full glass px-7 py-4 text-base font-semibold hover:bg-white/10 transition"
-            >
-              See Our Work
-            </Link>
+              <div className="mt-10 flex flex-wrap gap-4">
+                <Link
+                  to="/contact"
+                  className="group inline-flex items-center gap-2 rounded-full bg-gradient-warm px-7 py-4 text-base font-semibold text-white shadow-glow hover:opacity-90 transition"
+                >
+                  Plan Your Event
+                  <ArrowRight size={18} className="group-hover:translate-x-1 transition" />
+                </Link>
+                <Link
+                  to="/work"
+                  className="inline-flex items-center gap-2 rounded-full glass px-7 py-4 text-base font-semibold hover:bg-white/10 transition"
+                >
+                  See Our Work
+                </Link>
+              </div>
+            </div>
+
+            <div className="lg:col-span-5 flex justify-center items-center">
+              <ThreeDModel />
+            </div>
           </div>
 
           <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl">

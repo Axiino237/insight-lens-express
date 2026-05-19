@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Layout } from "@/components/Layout";
+import { StallModel } from "@/components/StallModel";
 import work1 from "@/assets/work-1.jpg";
 import work2 from "@/assets/work-2.jpg";
 import work3 from "@/assets/work-3.jpg";
@@ -68,6 +69,24 @@ function Work() {
               </div>
             </article>
           ))}
+        </div>
+      </section>
+
+      {/* 3D MODEL SECTION */}
+      <section className="py-24 border-t border-border/40 bg-gradient-to-b from-transparent to-card/10">
+        <div className="mx-auto max-w-7xl px-4">
+          <div className="max-w-3xl mb-12">
+            <p className="text-xs uppercase tracking-[0.3em] text-brand-cyan mb-3">Interactive Exhibition Design</p>
+            <h2 className="font-display text-4xl md:text-6xl font-extrabold leading-tight">
+              Explore Our <span className="text-gradient-brand">Exhibition Stall in 3D</span>
+            </h2>
+            <p className="mt-4 text-muted-foreground text-base md:text-lg leading-relaxed">
+              We design and construct high-impact corporate, promotional, and brand exhibition stalls. 
+              Interact with our custom-designed Chemical Stall in real-time 3D space.
+            </p>
+          </div>
+
+          <StallModel />
         </div>
       </section>
     </>

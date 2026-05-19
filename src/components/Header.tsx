@@ -19,7 +19,7 @@ export function Header() {
       <div className="mx-auto mt-4 max-w-7xl px-4">
         <div className="glass rounded-2xl flex items-center justify-between px-4 py-3 md:px-6">
           <Link to="/" className="flex items-center gap-3">
-            <img src={logo} alt="The First Step Solutions logo" className="h-16 md:h-20 w-auto" />
+            <img src={logo} alt="The First Step Solutions logo" className="h-8 md:h-10 w-auto" />
             <span className="font-display font-bold text-base md:text-xl leading-tight whitespace-nowrap">
               <span className="text-muted-foreground">The</span>{" "}
               <span className="text-gradient-warm">First Step</span>{" "}
@@ -42,7 +42,7 @@ export function Header() {
 
           <div className="hidden md:flex items-center gap-2">
             <a
-              href="https://wizcraft.co/"
+              href="https://www.umshiv.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="group relative inline-flex items-center gap-2 rounded-full px-[1px] py-[1px] bg-gradient-warm shadow-glow hover:shadow-[0_0_30px_rgba(255,140,60,0.5)] transition-all"
@@ -83,7 +83,7 @@ export function Header() {
               </Link>
             ))}
             <a
-              href="https://wizcraft.co/"
+              href="https://www.umshiv.com/"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setOpen(false)}

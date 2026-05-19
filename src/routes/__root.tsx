@@ -9,6 +9,7 @@ import {
 } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
+import logo from "../assets/logo.png";
 
 function NotFoundComponent() {
   return (
@@ -67,6 +68,25 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   );
 }
 
+function PendingComponent() {
+  return (
+    <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-background/90 backdrop-blur-xl">
+      <div className="flex flex-col items-center gap-6 animate-pulse">
+        <div className="relative h-24 w-24 md:h-32 md:w-32">
+          {/* Subtle background glow */}
+          <div className="absolute inset-0 bg-gradient-warm rounded-full blur-2xl opacity-35 scale-110" />
+          <img src={logo} alt="Loading..." className="relative h-full w-full object-contain float-slow" />
+        </div>
+        <div className="flex items-center gap-1.5 mt-2">
+          <span className="h-2 w-2 rounded-full bg-brand-cyan animate-bounce [animation-delay:-0.3s]" />
+          <span className="h-2 w-2 rounded-full bg-brand-magenta animate-bounce [animation-delay:-0.15s]" />
+          <span className="h-2 w-2 rounded-full bg-brand-orange animate-bounce" />
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
     meta: [
@@ -81,8 +101,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "The First Step Solutions — Ideas. Innovation. Impact." },
       { name: "twitter:description", content: "The First Step Solutions is a premier event management and brand experience agency crafting unforgettable corporate events, brand activations, conferences and integrated communication." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/154b968a-e1d1-43e1-ac81-47c273f98328/id-preview-7206dd18--3238db7d-1c74-4eca-b737-67a27ba92df5.lovable.app-1778866420166.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/154b968a-e1d1-43e1-ac81-47c273f98328/id-preview-7206dd18--3238db7d-1c74-4eca-b737-67a27ba92df5.lovable.app-1778866420166.png" },
+      { property: "og:image", content: "/logo.png" },
+      { name: "twitter:image", content: "/logo.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
@@ -95,6 +115,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
   errorComponent: ErrorComponent,
+  pendingComponent: PendingComponent,
 });
 
 function RootShell({ children }: { children: React.ReactNode }) {
