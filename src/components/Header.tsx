@@ -78,6 +78,15 @@ export function Header() {
                 {n.label}
               </Link>
             ))}
+            <a
+              href="https://wizcraft.co/"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setOpen(false)}
+              className="mt-2 inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-foreground"
+            >
+              Our Group
+            </a>
             <Link
               to="/contact"
               onClick={() => setOpen(false)}
