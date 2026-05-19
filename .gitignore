@@ -32,5 +32,4 @@ dist-ssr
 *.sw?
 
 # 3D Model and Backups
-public/uploads_files_7003813_chemical_stall_.glb
 src/assets/logo_backup.png
