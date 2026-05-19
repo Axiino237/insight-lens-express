@@ -45,9 +45,13 @@ export function Header() {
               href="https://wizcraft.co/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-4 py-2.5 text-sm font-semibold text-foreground hover:bg-white/10 transition"
+              className="group relative inline-flex items-center gap-2 rounded-full px-[1px] py-[1px] bg-gradient-warm shadow-glow hover:shadow-[0_0_30px_rgba(255,140,60,0.5)] transition-all"
             >
-              Our Group
+              <span className="inline-flex items-center gap-2 rounded-full bg-background/80 backdrop-blur px-4 py-2 text-sm font-semibold text-foreground group-hover:bg-background/60 transition-colors">
+                <span className="h-2 w-2 rounded-full bg-brand-cyan animate-pulse" />
+                Visit Parent Group
+                <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </span>
             </a>
             <Link
               to="/contact"
