@@ -42,9 +42,21 @@ export function Footer() {
           <div>
             <h4 className="font-semibold mb-4 text-sm uppercase tracking-wider text-muted-foreground">Reach Us</h4>
             <ul className="space-y-3 text-sm text-muted-foreground">
-              <li className="flex gap-2"><MapPin size={16} className="text-brand-magenta mt-0.5" /> Chennai, India</li>
-              <li className="flex gap-2"><Mail size={16} className="text-brand-orange mt-0.5" /> hello@firstsolutions.co</li>
-              <li className="flex gap-2"><Phone size={16} className="text-brand-cyan mt-0.5" /> +91 98000 00000</li>
+              <li className="flex gap-2">
+                <MapPin size={16} className="text-brand-magenta mt-0.5" /> Chennai, India
+              </li>
+              <li className="flex gap-2">
+                <Mail size={16} className="text-brand-orange mt-0.5" />
+                <a href="mailto:hello@firstsolutions.co" className="hover:text-brand-cyan transition">
+                  hello@firstsolutions.co
+                </a>
+              </li>
+              <li className="flex gap-2">
+                <Phone size={16} className="text-brand-cyan mt-0.5" />
+                <a href="tel:+914431536968" className="hover:text-brand-cyan transition">
+                  +91 44 3153 6968
+                </a>
+              </li>
             </ul>
           </div>
         </div>
