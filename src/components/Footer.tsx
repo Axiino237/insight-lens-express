@@ -43,7 +43,8 @@ export function Footer() {
             <h4 className="font-semibold mb-4 text-sm uppercase tracking-wider text-muted-foreground">Reach Us</h4>
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li className="flex gap-2">
-                <MapPin size={16} className="text-brand-magenta mt-0.5" /> Chennai, India
+                <MapPin size={16} className="text-brand-magenta mt-0.5 shrink-0" />
+                <span>Flat No. 27, 1st Street, Kothari Nagar,<br />Annai Sathya Nagar Main Road,<br />Ramapuram, Chennai 600089</span>
               </li>
               <li className="flex gap-2">
                 <Mail size={16} className="text-brand-orange mt-0.5" />
