@@ -11,7 +11,7 @@ export function Chatbot() {
   const [messages, setMessages] = useState<Message[]>([
     {
       sender: "bot",
-      text: "Hi! I am your First Step Assistant. Ask me anything about our services (e.g., Stall Fabrication, Brand Activation, Corporate Events, Weddings), or click one of the quick options below!",
+      text: "Hi! I am your mimi. Ask me anything about our services (e.g., Stall Fabrication, Brand Activation, Corporate Events, Weddings), or click one of the quick options below!",
     },
   ]);
   const [inputValue, setInputValue] = useState("");
@@ -48,7 +48,7 @@ export function Chatbot() {
     const text = input.toLowerCase().trim();
 
     if (text === "hi" || text === "hello" || text === "hey" || text === "who are you" || text.includes("help") || text === "greetings") {
-      return "Hello! I am your First Step Assistant. I can help you with details about our services. Ask me about Stall Fabrication, Brand Activation, Corporate Events, or any other service!";
+      return "Hello! I am your mimi. I can help you with details about our services. Ask me about Stall Fabrication, Brand Activation, Corporate Events, or any other service!";
     }
     if (text.includes("how many service") || text.includes("what service") || text.includes("list") || text.includes("what do you do") || text.includes("all service") || text.includes("your service")) {
       return "We provide 7 key brand experience & event services:\n\n1. 🛠️ **Stall Fabrication** (Exhibition booths)\n2. ⚡ **Brand Activation** (Pop-ups & takeovers)\n3. 🏢 **Corporate Events** (Conferences & summits)\n4. ✈️ **MICE** (Incentive travel & global exhibitions)\n5. 💍 **Weddings & Celebrations** (Bespoke weddings)\n6. 🎬 **Creative & Production** (Stage design & AV)\n7. 🌐 **Digital Solutions** (Virtual & hybrid events)\n\nWhich one would you like to know more about?";
@@ -111,7 +111,7 @@ export function Chatbot() {
                 <span className="absolute bottom-0 right-0 h-3 w-3 rounded-full bg-green-500 border-2 border-background" />
               </div>
               <div>
-                <h4 className="font-bold text-sm text-foreground">First Step Assistant</h4>
+                <h4 className="font-bold text-sm text-foreground">mimi</h4>
                 <p className="text-[10px] text-muted-foreground">Online · Answers instantly</p>
               </div>
             </div>
@@ -142,8 +142,8 @@ export function Chatbot() {
               >
                 <div
                   className={`max-w-[85%] rounded-2xl px-4 py-2.5 text-sm ${msg.sender === "user"
-                      ? "bg-brand-magenta text-white rounded-tr-none shadow-glow-sm"
-                      : "bg-input border border-border text-foreground rounded-tl-none"
+                    ? "bg-brand-magenta text-white rounded-tr-none shadow-glow-sm"
+                    : "bg-input border border-border text-foreground rounded-tl-none"
                     } whitespace-pre-line`}
                 >
                   {msg.text}
