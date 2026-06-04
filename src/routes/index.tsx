@@ -41,10 +41,10 @@ const projects = [
   { img: work3, title: "Aurum Awards Night", tag: "Awards" },
   { img: work4, title: "Sonic Sunset Festival", tag: "Festival" },
   { img: work5, title: "The Anaya Wedding", tag: "Wedding" },
-  { img: work6, title: "Helix Product Launch", tag: "Launch" },
+  { img: work6, title: "Helix Product Launch", tag: "Product Launch" },
 ];
 
-const clients = ["TATA", "RELIANCE", "INFOSYS", "AMAZON", "GOOGLE", "MICROSOFT", "WIPRO", "HCL", "PAYTM", "OLA", "ZOMATO", "FLIPKART"];
+const clients = ["REL", "AQUA CLEAN", "CONCEPTION SOFTWARE TECHNOLOGY", "CM TECHNO", "MEKARK", "ORG ENGITECH", "JETPRO", "MAXIO INDUSTRIES PVT. LTD."];
 
 function Home() {
   return (
@@ -208,7 +208,6 @@ function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6">
                   <span className="inline-block text-xs uppercase tracking-widest text-brand-yellow mb-2">{p.tag}</span>
-                  <h3 className="font-display text-2xl md:text-3xl font-bold">{p.title}</h3>
                 </div>
               </div>
             ))}
@@ -225,15 +224,15 @@ function Home() {
             ))}
           </div>
           <p className="font-display text-2xl md:text-4xl font-semibold leading-tight">
-            "The First Step Solutions didn't just produce our 10-year summit — they
-            choreographed an <span className="text-gradient-brand">emotional standing ovation</span> from
-            2,400 employees. We are still feeling the impact."
+            "The First Step Solutions didn't just build our exhibition stall — they designed an
+            <span className="text-gradient-brand">extraordinary brand experience</span> that became the absolute highlight
+            of the venue. Their attention to detail drove massive footfall and engagement."
           </p>
           <div className="mt-8 inline-flex items-center gap-3">
             <div className="h-12 w-12 rounded-full bg-gradient-warm" />
             <div className="text-left">
-              <div className="font-semibold">Priya Subramaniam</div>
-              <div className="text-sm text-muted-foreground">VP Communications, Helix Group</div>
+              <div className="font-semibold">Elangovan</div>
+              <div className="text-sm text-muted-foreground">Revathi Equipment India Ltd.</div>
             </div>
           </div>
         </div>

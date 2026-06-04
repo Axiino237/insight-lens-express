@@ -30,7 +30,7 @@ const projects = [
   { img: work3, title: "Aurum Awards Night", tag: "Awards", year: "2024", client: "FICCI" },
   { img: work4, title: "Sonic Sunset Festival", tag: "Festival", year: "2025", client: "Spotify India" },
   { img: work5, title: "The Anaya Wedding", tag: "Wedding", year: "2024", client: "Private" },
-  { img: work6, title: "Helix Product Launch", tag: "Launch", year: "2025", client: "Helix Mobility" },
+  { img: work6, title: "Helix Product Launch", tag: "Product Launch", year: "2025", client: "Helix Mobility" },
 ];
 
 function Work() {
@@ -62,9 +62,7 @@ function Work() {
               <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
               <div className="absolute bottom-0 inset-x-0 p-8 flex flex-wrap items-end justify-between gap-3">
                 <div>
-                  <span className="text-xs uppercase tracking-widest text-brand-yellow">{p.tag} · {p.year}</span>
-                  <h2 className="font-display text-3xl md:text-4xl font-bold mt-2">{p.title}</h2>
-                  <p className="text-sm text-muted-foreground mt-1">For {p.client}</p>
+                  <span className="text-xs uppercase tracking-widest text-brand-yellow">{p.tag}</span>
                 </div>
               </div>
             </article>
