@@ -7,7 +7,7 @@ useGLTF.setDecoderPath("https://www.gstatic.com/draco/versioned/decoders/1.5.5/"
 
 // Model loader component
 function Model() {
-  const { scene } = useGLTF("/uploads_files_7003813_chemical_stall_.glb");
+  const { scene } = useGLTF("/polystone_compounds.glb");
   return <primitive object={scene} />;
 }
 
@@ -25,10 +25,10 @@ function StallLoader() {
         </span>
       </div>
       <h3 className="font-display font-semibold text-lg mt-6 text-foreground">
-        Loading Exhibition Stall
+        Loading Polystone Compounds
       </h3>
       <p className="text-xs text-muted-foreground mt-2 max-w-xs leading-relaxed">
-        Streaming the 3D Chemical Stall asset (239MB). This may take a moment depending on your disk/connection speed.
+        Streaming the 3D Polystone Compounds asset (68MB). This may take a moment depending on your disk/connection speed.
       </p>
       
       {/* Progress bar indicator */}
@@ -153,4 +153,4 @@ export function StallModel() {
 }
 
 // Preload model to cache it
-useGLTF.preload("/uploads_files_7003813_chemical_stall_.glb");
+useGLTF.preload("/polystone_compounds.glb");

@@ -21,7 +21,7 @@ export const Route = createFileRoute("/services")({
 const services = [
   { icon: Megaphone, title: "Brand Activation", desc: "Pop-ups, mall takeovers, influencer ignitions and on-ground spectacles that move stock and shift perception.", color: "from-brand-orange to-brand-magenta" },
   { icon: Calendar, title: "Corporate Events", desc: "Town-halls, annual days, R&Rs and partner meets, choreographed for purpose and produced for prime-time.", color: "from-brand-cyan to-brand-blue" },
-  { icon: Sparkles, title: "MICE & Conferences", desc: "Multi-day summits, exhibitions and incentive travel — logistics, content and creative under one roof.", color: "from-brand-green to-brand-cyan" },
+  { icon: Sparkles, title: "MICE & Conferences", desc: "Multi-day summits, global exhibitions and international incentive travel — logistics, content and creative under one roof.", color: "from-brand-green to-brand-cyan" },
   { icon: Camera, title: "Weddings & Celebrations", desc: "Bespoke design, destination logistics and obsessive guest-experience for once-in-a-lifetime occasions.", color: "from-brand-magenta to-brand-blue" },
   { icon: Lightbulb, title: "Creative & Production", desc: "Stage design, AV, film, scripts, branding — in-house craft that keeps every detail on-strategy.", color: "from-brand-yellow to-brand-orange" },
   { icon: Globe2, title: "Digital & Hybrid", desc: "Streaming, virtual venues and immersive web — events that travel anywhere your audience is.", color: "from-brand-blue to-brand-magenta" },

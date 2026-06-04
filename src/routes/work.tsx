@@ -82,7 +82,7 @@ function Work() {
             </h2>
             <p className="mt-4 text-muted-foreground text-base md:text-lg leading-relaxed">
               We design and construct high-impact corporate, promotional, and brand exhibition stalls. 
-              Interact with our custom-designed Chemical Stall in real-time 3D space.
+              Interact with our custom-designed Polystone Compounds exhibition stall in real-time 3D space.
             </p>
           </div>
 

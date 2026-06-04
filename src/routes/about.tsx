@@ -8,7 +8,7 @@ export const Route = createFileRoute("/about")({
       { title: "About — The First Step Solutions" },
       { name: "description", content: "Learn about The First Step Solutions — a brand experience agency built on ideas, innovation and impact." },
       { property: "og:title", content: "About — The First Step Solutions" },
-      { property: "og:description", content: "Eleven years. Six cities. One obsession — unforgettable experiences." },
+      { property: "og:description", content: "Four years. Global footprint. One obsession — unforgettable experiences." },
     ],
   }),
   component: () => (
@@ -36,11 +36,10 @@ function About() {
             obsessed with <span className="text-gradient-brand">the live moment.</span>
           </h1>
           <p className="mt-8 max-w-3xl text-lg text-muted-foreground leading-relaxed">
-            The First Step Solutions started in 2014 with three people, a borrowed laptop
-            and a stubborn belief: live experiences are the most powerful storytelling
-            medium on earth. Eleven years on, we're a 90-strong team of producers,
-            designers, technologists and dreamers — building moments that brands
-            remember and people retell.
+            The First Step Solutions is a premier brand experience and event agency with a global reach. 
+            Since our inception, we have grown into a diverse team of producers, 
+            designers, technologists, and dreamers — building unforgettable moments 
+            and executing seamless activations worldwide.
           </p>
         </div>
       </section>
@@ -78,7 +77,7 @@ function About() {
             Where you'll find us.
           </h2>
           <div className="flex flex-wrap justify-center gap-3">
-            {["Chennai HQ", "Mumbai", "Bengaluru", "Delhi NCR", "Hyderabad", "Dubai"].map((c) => (
+            {["Chennai HQ", "Mumbai", "Bengaluru", "Delhi NCR", "Dubai", "Global Delivery"].map((c) => (
               <span key={c} className="glass rounded-full px-6 py-3 text-sm font-medium">
                 {c}
               </span>

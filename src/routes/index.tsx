@@ -79,9 +79,9 @@ function Home() {
               </h1>
 
               <p className="mt-8 max-w-2xl text-lg md:text-xl text-muted-foreground leading-relaxed">
-                The First Step Solutions is a full-service brand experience & event company.
-                From intimate launches to 50,000-strong spectacles — we design,
-                produce and execute every moment.
+                The First Step Solutions is a premier brand experience & event company with a global footprint.
+                From local activations to massive worldwide spectacles, we design,
+                produce, and execute seamless events anywhere across the globe.
               </p>
 
               <div className="mt-10 flex flex-wrap gap-4">
@@ -108,10 +108,10 @@ function Home() {
 
           <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl">
             {[
-              { n: "11+", l: "Years of magic" },
-              { n: "1200+", l: "Events delivered" },
-              { n: "180+", l: "Brands served" },
-              { n: "22", l: "Cities, 6 countries" },
+              { n: "4+", l: "Years of magic" },
+              { n: "50+", l: "Events delivered" },
+              { n: "30+", l: "Brands served" },
+              { n: "7", l: "Cities, 3 countries" },
             ].map((s) => (
               <div key={s.l} className="glass rounded-2xl p-5">
                 <div className="font-display text-3xl md:text-4xl font-bold text-gradient-brand">{s.n}</div>
