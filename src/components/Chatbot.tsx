@@ -45,8 +45,14 @@ export function Chatbot() {
   };
 
   const matchKeyword = (input: string): string => {
-    const text = input.toLowerCase();
+    const text = input.toLowerCase().trim();
 
+    if (text === "hi" || text === "hello" || text === "hey" || text === "who are you" || text.includes("help") || text === "greetings") {
+      return "Hello! I am your First Step Assistant. I can help you with details about our services. Ask me about Stall Fabrication, Brand Activation, Corporate Events, or any other service!";
+    }
+    if (text.includes("how many service") || text.includes("what service") || text.includes("list") || text.includes("what do you do") || text.includes("all service") || text.includes("your service")) {
+      return "We provide 7 key brand experience & event services:\n\n1. 🛠️ **Stall Fabrication** (Exhibition booths)\n2. ⚡ **Brand Activation** (Pop-ups & takeovers)\n3. 🏢 **Corporate Events** (Conferences & summits)\n4. ✈️ **MICE** (Incentive travel & global exhibitions)\n5. 💍 **Weddings & Celebrations** (Bespoke weddings)\n6. 🎬 **Creative & Production** (Stage design & AV)\n7. 🌐 **Digital Solutions** (Virtual & hybrid events)\n\nWhich one would you like to know more about?";
+    }
     if (text.includes("stall") || text.includes("fabricat") || text.includes("booth") || text.includes("exhibit")) {
       return "We design and construct premium exhibition stalls, promotional booths, and 3D display layouts that capture attention and drive customer engagement.";
     }
@@ -69,7 +75,17 @@ export function Chatbot() {
       return "We offer professional web streaming, virtual venue development, hybrid conference tools, and custom digital interactive setups.";
     }
 
-    return "I couldn't find a direct match for your request about our services. Please call customer support at +91 44 3153 6968 or email us at hello@firstsolutions.co for details!";
+    if (text.includes("price") || text.includes("cost") || text.includes("charge") || text.includes("budget") || text.includes("quote") || text.includes("rate") || text.includes("fee")) {
+      return "Our service pricing is customized based on your project scale, location, design complexity, and fabrication materials. Please reach out to customer support at +91 44 3153 6968 or email us at hello@thefirststepsolutions.co for a customized quote!";
+    }
+    if (text.includes("location") || text.includes("address") || text.includes("office") || text.includes("where are you") || text.includes("chennai") || text.includes("mumbai") || text.includes("dubai") || text.includes("bengaluru")) {
+      return "We are headquartered in Chennai (Ramapuram), with offices in Mumbai, Bengaluru, and Dubai. We plan, execute, and deliver events globally! You can find our main address under 'Visit' on our contact page.";
+    }
+    if (text.includes("contact") || text.includes("phone") || text.includes("number") || text.includes("call") || text.includes("email") || text.includes("support") || text.includes("reach")) {
+      return "You can contact our support team at +91 44 3153 6968 or email hello@thefirststepsolutions.co. We are active Mon-Sat, 9:30 AM to 6:30 PM IST, and respond within 24 hours!";
+    }
+
+    return "I couldn't find a direct match for your request about our services. Please call customer support at +91 44 3153 6968 or email us at hello@thefirststepsolutions.co for details!";
   };
 
   const quickPrompts = [
