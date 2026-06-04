@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Layout } from "@/components/Layout";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Send, ChevronDown } from "lucide-react";
 import { useState } from "react";
 
 export const Route = createFileRoute("/contact")({
@@ -58,15 +58,20 @@ function Contact() {
                 </div>
                 <div>
                   <label className="block text-sm font-medium mb-2 text-muted-foreground">Service of interest</label>
-                  <select className="w-full rounded-xl bg-input border border-border px-4 py-3 text-foreground focus:outline-none focus:ring-2 focus:ring-brand-magenta">
-                    <option>Stall Fabrication</option>
-                    <option>Brand Activation</option>
-                    <option>Corporate Event</option>
-                    <option>Conference / MICE</option>
-                    <option>Wedding / Celebration</option>
-                    <option>Product Launch</option>
-                    <option>Other</option>
-                  </select>
+                  <div className="relative">
+                    <select className="w-full appearance-none rounded-xl bg-input border border-border px-4 py-3 pr-10 text-foreground focus:outline-none focus:ring-2 focus:ring-brand-magenta">
+                      <option>Brand Activation</option>
+                      <option>Corporate Event</option>
+                      <option>Conference / MICE</option>
+                      <option>Wedding / Celebration</option>
+                      <option>Product Launch</option>
+                      <option>Stall Fabrication</option>
+                      <option>Other</option>
+                    </select>
+                    <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-4 text-muted-foreground">
+                      <ChevronDown size={18} />
+                    </div>
+                  </div>
                 </div>
                 <div>
                   <label className="block text-sm font-medium mb-2 text-muted-foreground">Tell us about your brief</label>
