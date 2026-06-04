@@ -59,6 +59,7 @@ function Contact() {
                 <div>
                   <label className="block text-sm font-medium mb-2 text-muted-foreground">Service of interest</label>
                   <select className="w-full rounded-xl bg-input border border-border px-4 py-3 text-foreground focus:outline-none focus:ring-2 focus:ring-brand-magenta">
+                    <option>Stall Fabrication</option>
                     <option>Brand Activation</option>
                     <option>Corporate Event</option>
                     <option>Conference / MICE</option>
