@@ -92,7 +92,7 @@ function Contact() {
           </div>
 
           <div className="lg:col-span-2 space-y-4">
-            <InfoCard icon={Mail} title="Email" lines={["hello@firstsolutions.co", "newbusiness@firstsolutions.co"]} accent="text-brand-orange" />
+            <InfoCard icon={Mail} title="Email" lines={["hello@thefirststepsolutions.co"]} accent="text-brand-orange" />
             <InfoCard icon={Phone} title="Call" lines={["+91 44 3153 6968", "Mon–Sat · 9:30am to 6.30pm IST"]} accent="text-brand-cyan" />
             <InfoCard icon={MapPin} title="Visit" lines={["Flat No. 27, 1st Street, Kothari Nagar,", "Annai Sathya Nagar Main Road,", "Ramapuram, Chennai 600089, India"]} accent="text-brand-magenta" />
           </div>
