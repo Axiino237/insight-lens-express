@@ -45,10 +45,10 @@ export function Header() {
               href="https://www.umshiv.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative inline-flex items-center gap-2 rounded-full px-[1px] py-[1px] bg-gradient-warm shadow-glow hover:shadow-[0_0_30px_rgba(255,140,60,0.5)] transition-all"
+              className="group relative inline-flex items-center gap-2 rounded-full px-[1px] py-[1px] bg-gradient-umshiv shadow-glow-umshiv hover:shadow-[0_0_30px_rgba(202,168,90,0.5)] transition-all"
             >
               <span className="inline-flex items-center gap-2 rounded-full bg-background/80 backdrop-blur px-4 py-2 text-sm font-semibold text-foreground group-hover:bg-background/60 transition-colors">
-                <span className="h-2 w-2 rounded-full bg-brand-cyan animate-pulse" />
+                <span className="h-2 w-2 rounded-full bg-[#3da86c] animate-pulse" />
                 Go to the Tree
                 <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </span>
@@ -87,9 +87,13 @@ export function Header() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setOpen(false)}
-              className="mt-2 inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-foreground"
+              className="mt-2 group relative inline-flex items-center justify-center gap-2 rounded-full px-[1px] py-[1px] bg-gradient-umshiv shadow-glow-umshiv hover:shadow-[0_0_30px_rgba(202,168,90,0.5)] transition-all"
             >
-              Go to the Tree
+              <span className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-background/80 backdrop-blur px-5 py-3 text-sm font-semibold text-foreground group-hover:bg-background/60 transition-colors">
+                <span className="h-2 w-2 rounded-full bg-[#3da86c] animate-pulse" />
+                Go to the Tree
+                <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </span>
             </a>
             <Link
               to="/contact"

@@ -66,7 +66,7 @@ function Home() {
               <div className="flex items-center gap-2 mb-8">
                 <span className="h-2 w-2 rounded-full bg-brand-magenta animate-pulse" />
                 <span className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
-                  Est. 2014 · Chennai · Mumbai · Bengaluru · Dubai
+                  Est. 2022 · Chennai
                 </span>
               </div>
 

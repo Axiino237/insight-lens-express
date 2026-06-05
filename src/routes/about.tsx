@@ -36,9 +36,9 @@ function About() {
             obsessed with <span className="text-gradient-brand">the live moment.</span>
           </h1>
           <p className="mt-8 max-w-3xl text-lg text-muted-foreground leading-relaxed">
-            The First Step Solutions is a premier brand experience and event agency with a global reach. 
-            Since our inception, we have grown into a diverse team of producers, 
-            designers, technologists, and dreamers — building unforgettable moments 
+            The First Step Solutions is a premier brand experience and event agency with a global reach.
+            Since our inception, we have grown into a diverse team of producers,
+            designers, technologists, and dreamers — building unforgettable moments
             and executing seamless activations worldwide.
           </p>
         </div>
@@ -77,7 +77,7 @@ function About() {
             Where you'll find us.
           </h2>
           <div className="flex flex-wrap justify-center gap-3">
-            {["Chennai HQ", "Mumbai", "Bengaluru", "Delhi NCR", "Dubai", "Global Delivery"].map((c) => (
+            {["Chennai HQ", "Mumbai"].map((c) => (
               <span key={c} className="glass rounded-full px-6 py-3 text-sm font-medium">
                 {c}
               </span>
@@ -89,6 +89,9 @@ function About() {
           >
             Work with us <ArrowRight size={18} />
           </Link>
+          <p className="mt-6 text-base md:text-lg font-bold uppercase tracking-[0.25em] text-gradient-warm">
+            Worldwide Service & Global Execution
+          </p>
         </div>
       </section>
     </>
