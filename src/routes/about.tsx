@@ -6,9 +6,22 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About — The First Step Solutions" },
-      { name: "description", content: "Learn about The First Step Solutions — a brand experience agency built on ideas, innovation and impact." },
+      { name: "description", content: "Learn about The First Step Solutions — a premier event management and brand experience agency built on ideas, innovation, and impact. Over 4 years of executing global corporate events." },
+      { name: "keywords", content: "about the first step solutions, event production agency, brand activation team, corporate event planners, event execution team chennai, global event managers, event management team profiles, professional event coordinators, creative directors events, event fabrication experts, experiential design agency, top event experts india, event operation logistics, experienced event managers chennai" },
       { property: "og:title", content: "About — The First Step Solutions" },
-      { property: "og:description", content: "Four years. Global footprint. One obsession — unforgettable experiences." },
+      { property: "og:description", content: "Learn about our philosophy: Ideas. Innovation. Impact. Premier brand experience agency with global footprint." },
+      { property: "og:url", content: "https://www.thefirststepsolutions.com/about" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.thefirststepsolutions.com/logo.png" },
+      { property: "og:site_name", content: "The First Step Solutions" },
+      { property: "og:locale", content: "en_US" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "About — The First Step Solutions" },
+      { name: "twitter:description", content: "Learn about our philosophy: Ideas. Innovation. Impact. Premier brand experience agency with global footprint." },
+      { name: "twitter:image", content: "https://www.thefirststepsolutions.com/logo.png" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://www.thefirststepsolutions.com/about" },
     ],
   }),
   component: () => (

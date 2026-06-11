@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X, ArrowUpRight } from "lucide-react";
+import { BirdAnimation } from "./BirdAnimation";
 import logo from "@/assets/logo.png";
 
 const nav = [
@@ -19,7 +20,7 @@ export function Header() {
       <div className="mx-auto mt-4 max-w-7xl px-4">
         <div className="glass rounded-2xl flex items-center justify-between px-4 py-3 md:px-6">
           <Link to="/" className="flex items-center gap-3">
-            <img src={logo} alt="The First Step Solutions logo" className="h-8 md:h-10 w-auto" />
+            <BirdAnimation className="h-8 md:h-10 w-auto" speedMs={120} />
             <span className="font-display font-bold text-base md:text-xl leading-tight whitespace-nowrap">
               <span className="text-muted-foreground">The</span>{" "}
               <span className="text-gradient-warm">First Step</span>{" "}

@@ -6,9 +6,22 @@ export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
       { title: "Services — The First Step Solutions" },
-      { name: "description", content: "Brand activation, corporate events, MICE, weddings, creative production and digital experiences — six disciplines, one studio." },
+      { name: "description", content: "Explore our premium event services: Brand Activation, Corporate Events, global MICE, bespoke Weddings, Creative & Production, and Digital/Hybrid solutions." },
+      { name: "keywords", content: "brand activation agency chennai, corporate events management, MICE tour organizers, exhibition stall construction, wedding planning services, product launch event, digital hybrid events, bespoke wedding decorators, corporate conference planners, brand experiential popups, interactive virtual events, event stage design, sound and lighting rental for events, mall activation organizers, stall fabricator in mumbai, stall fabricator in bengaluru, corporate rewards and recognition organizers, custom trade show booths, customised stall design, exhibition fabrication, event fabrics and printing, custom stall setup" },
       { property: "og:title", content: "Services — The First Step Solutions" },
-      { property: "og:description", content: "Six disciplines, one creative powerhouse." },
+      { property: "og:description", content: "Six disciplines, one creative powerhouse. Brand activation, corporate events, MICE, weddings, and digital experiences." },
+      { property: "og:url", content: "https://www.thefirststepsolutions.com/services" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.thefirststepsolutions.com/logo.png" },
+      { property: "og:site_name", content: "The First Step Solutions" },
+      { property: "og:locale", content: "en_US" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Services — The First Step Solutions" },
+      { name: "twitter:description", content: "Six disciplines, one creative powerhouse. Brand activation, corporate events, MICE, weddings, and digital experiences." },
+      { name: "twitter:image", content: "https://www.thefirststepsolutions.com/logo.png" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://www.thefirststepsolutions.com/services" },
     ],
   }),
   component: () => (

@@ -33,7 +33,7 @@ export default defineConfig({
   },
   server: {
     watch: {
-      ignored: ["**/*.glb"],
+      ignored: ["**/*.glb", "**/src/assets/Bird/**"],
     },
   },
 });

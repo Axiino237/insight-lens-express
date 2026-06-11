@@ -5,7 +5,7 @@ import {
   Link,
   createRootRouteWithContext,
 } from "@tanstack/react-router";
-
+import { BirdAnimation } from "../components/BirdAnimation";
 import logo from "../assets/logo.png";
 
 function NotFoundComponent() {
@@ -67,7 +67,7 @@ function PendingComponent() {
         <div className="relative h-24 w-24 md:h-32 md:w-32">
           {/* Subtle background glow */}
           <div className="absolute inset-0 bg-gradient-warm rounded-full blur-2xl opacity-35 scale-110" />
-          <img src={logo} alt="Loading..." className="relative h-full w-full object-contain float-slow" />
+          <BirdAnimation className="relative h-full w-full object-contain float-slow" speedMs={100} />
         </div>
         <div className="flex items-center gap-1.5 mt-2">
           <span className="h-2 w-2 rounded-full bg-brand-cyan animate-bounce [animation-delay:-0.3s]" />

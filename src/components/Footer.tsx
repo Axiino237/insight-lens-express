@@ -21,8 +21,19 @@ export function Footer() {
               corporate events and integrated communication for ambitious brands.
             </p>
             <div className="mt-6 flex gap-3">
-              {[Instagram, Linkedin, Youtube].map((Icon, i) => (
-                <a key={i} href="#" className="h-10 w-10 rounded-full glass grid place-items-center hover:bg-white/10 transition">
+              {[
+                { Icon: Instagram, label: "Instagram", href: "https://www.instagram.com/thefirststepsolutions/" },
+                { Icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/company/the-first-step-solutions/" },
+                { Icon: Youtube, label: "YouTube", href: "https://www.youtube.com/@thefirststepsolutions" },
+              ].map(({ Icon, label, href }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="h-10 w-10 rounded-full glass grid place-items-center hover:bg-white/10 transition"
+                >
                   <Icon size={16} />
                 </a>
               ))}
@@ -48,8 +59,8 @@ export function Footer() {
               </li>
               <li className="flex gap-2">
                 <Mail size={16} className="text-brand-orange mt-0.5" />
-                <a href="mailto:hello@firstsolutions.co" className="hover:text-brand-cyan transition">
-                  hello@firstsolutions.co
+                <a href="mailto:hello@thefirststepsolutions.co" className="hover:text-brand-cyan transition">
+                  hello@thefirststepsolutions.co
                 </a>
               </li>
               <li className="flex gap-2">

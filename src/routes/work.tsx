@@ -12,9 +12,22 @@ export const Route = createFileRoute("/work")({
   head: () => ({
     meta: [
       { title: "Our Work — The First Step Solutions" },
-      { name: "description", content: "Selected projects: activations, conferences, awards, festivals, weddings and product launches." },
+      { name: "description", content: "Explore our portfolio of successfully delivered events, including brand activations, conferences, awards nights, festivals, weddings, and 3D exhibition stalls." },
+      { name: "keywords", content: "event management portfolio, past events, brand activation case studies, event gallery, exhibition stall gallery, corporate event projects, event success stories, exhibition booth design models, live event photos, professional stage designs, past corporate summits, brand promotion gallery, creative event themes, event production showreel, local event execution examples, customised stall portfolio, exhibition fabrication examples" },
       { property: "og:title", content: "Our Work — The First Step Solutions" },
-      { property: "og:description", content: "Stories we've brought to life." },
+      { property: "og:description", content: "Check out our latest projects: activations, conferences, awards, festivals, weddings, and interactive 3D exhibition stalls." },
+      { property: "og:url", content: "https://www.thefirststepsolutions.com/work" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.thefirststepsolutions.com/logo.png" },
+      { property: "og:site_name", content: "The First Step Solutions" },
+      { property: "og:locale", content: "en_US" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Our Work — The First Step Solutions" },
+      { name: "twitter:description", content: "Check out our latest projects: activations, conferences, awards, festivals, weddings, and interactive 3D exhibition stalls." },
+      { name: "twitter:image", content: "https://www.thefirststepsolutions.com/logo.png" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://www.thefirststepsolutions.com/work" },
     ],
   }),
   component: () => (

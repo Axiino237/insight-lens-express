@@ -7,9 +7,22 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: "Contact — The First Step Solutions" },
-      { name: "description", content: "Drop your brief. We'll respond within 24 hours." },
+      { name: "description", content: "Get in touch with The First Step Solutions. Submit your event brief, call our customer support at +91 44 3153 6968, or visit our office in Chennai." },
+      { name: "keywords", content: "contact the first step solutions, event support, event planners contact, chennai event managers phone, hire event agency, event management office address, request event quote, wedding planners contact number, stall fabrication query, book corporate event organizers, hire brand activation team, event budget estimator, customised stall fabrication inquiry" },
       { property: "og:title", content: "Contact — The First Step Solutions" },
-      { property: "og:description", content: "Let's build the next unforgettable thing." },
+      { property: "og:description", content: "Let's build the next unforgettable brand experience. Send us your event brief." },
+      { property: "og:url", content: "https://www.thefirststepsolutions.com/contact" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.thefirststepsolutions.com/logo.png" },
+      { property: "og:site_name", content: "The First Step Solutions" },
+      { property: "og:locale", content: "en_US" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Contact — The First Step Solutions" },
+      { name: "twitter:description", content: "Let's build the next unforgettable brand experience. Send us your event brief." },
+      { name: "twitter:image", content: "https://www.thefirststepsolutions.com/logo.png" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://www.thefirststepsolutions.com/contact" },
     ],
   }),
   component: () => (

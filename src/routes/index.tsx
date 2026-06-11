@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout } from "@/components/Layout";
 import { ArrowRight, Sparkles, Megaphone, Calendar, Camera, Lightbulb, Globe2, Star } from "lucide-react";
 import { ThreeDModel } from "@/components/ThreeDModel";
+import { SchemaMarkup } from "@/components/SchemaMarkup";
 import heroEvent from "@/assets/hero-event.jpg";
 import work1 from "@/assets/work-1.jpg";
 import work2 from "@/assets/work-2.jpg";
@@ -15,8 +16,21 @@ export const Route = createFileRoute("/")({
     meta: [
       { title: "The First Step Solutions — Ideas. Innovation. Impact." },
       { name: "description", content: "Award-winning event management & brand experience agency. Corporate events, brand activations, conferences, weddings & integrated communication." },
+      { name: "keywords", content: "event management company chennai, brand activation agency, corporate event organizers, exhibition stall fabrication, wedding planners chennai, mice tour planners, digital events india, the first step solutions, event organizers in chennai, best event planners in tamil nadu, exhibition booth designers, corporate summit planners, branding agency chennai, product launch organizers, experiential marketing agency, top event management companies in chennai, live sound and light setup chennai, expo stall builders india, corporate annual day event planner, business meet coordinators, customised exhibition stalls, custom fabrication, customized event stalls, fabric exhibition stands" },
       { property: "og:title", content: "The First Step Solutions — Ideas. Innovation. Impact." },
-      { property: "og:description", content: "We turn ideas into experiences that move people and build brands." },
+      { property: "og:description", content: "We turn ideas into experiences that move people and build brands. Leading event management and brand activation agency." },
+      { property: "og:url", content: "https://www.thefirststepsolutions.com/" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.thefirststepsolutions.com/logo.png" },
+      { property: "og:site_name", content: "The First Step Solutions" },
+      { property: "og:locale", content: "en_US" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "The First Step Solutions — Ideas. Innovation. Impact." },
+      { name: "twitter:description", content: "We turn ideas into experiences that move people and build brands. Leading event management and brand activation agency." },
+      { name: "twitter:image", content: "https://www.thefirststepsolutions.com/logo.png" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://www.thefirststepsolutions.com/" },
     ],
   }),
   component: () => (
@@ -46,9 +60,55 @@ const projects = [
 
 const clients = ["REL", "AQUA CLEAN", "CONCEPTION SOFTWARE TECHNOLOGY", "CM TECHNO", "MEKARK", "ORG ENGITECH", "JETPRO", "MAXIO INDUSTRIES PVT. LTD."];
 
+const orgSchema = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "The First Step Solutions",
+  "image": "https://www.thefirststepsolutions.com/logo.png",
+  "@id": "https://www.thefirststepsolutions.com/#organization",
+  "url": "https://www.thefirststepsolutions.com/",
+  "telephone": "+914431536968",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Flat No. 27, 1st Street, Kothari Nagar, Annai Sathya Nagar Main Road, Ramapuram",
+    "addressLocality": "Chennai",
+    "addressRegion": "Tamil Nadu",
+    "postalCode": "600089",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 13.0289,
+    "longitude": 80.1797
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
+    ],
+    "opens": "09:30",
+    "closes": "18:30"
+  },
+  "sameAs": [
+    "https://www.instagram.com/thefirststepsolutions/",
+    "https://www.linkedin.com/company/the-first-step-solutions/",
+    "https://www.youtube.com/@thefirststepsolutions"
+  ]
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "The First Step Solutions",
+  "url": "https://www.thefirststepsolutions.com/"
+};
+
 function Home() {
   return (
     <>
+      <SchemaMarkup schema={orgSchema} />
+      <SchemaMarkup schema={websiteSchema} />
       {/* HERO */}
       <section className="relative noise-bg overflow-hidden">
         <div className="absolute inset-0 -z-10">
