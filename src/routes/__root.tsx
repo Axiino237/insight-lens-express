@@ -64,10 +64,10 @@ function PendingComponent() {
   return (
     <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-background/90 backdrop-blur-xl">
       <div className="flex flex-col items-center gap-6 animate-pulse">
-        <div className="relative h-24 w-24 md:h-32 md:w-32">
+        <div className="relative h-24 w-24 md:h-32 md:w-32 float-slow">
           {/* Subtle background glow */}
           <div className="absolute inset-0 bg-gradient-warm rounded-full blur-2xl opacity-35 scale-110" />
-          <BirdAnimation className="relative h-full w-full object-contain float-slow" speedMs={65} />
+          <BirdAnimation className="relative h-full w-full object-contain" speedMs={45} />
         </div>
         <div className="flex items-center gap-1.5 mt-2">
           <span className="h-2 w-2 rounded-full bg-brand-cyan animate-bounce [animation-delay:-0.3s]" />
