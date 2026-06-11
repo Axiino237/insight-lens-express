@@ -67,7 +67,7 @@ function PendingComponent() {
         <div className="relative h-24 w-24 md:h-32 md:w-32">
           {/* Subtle background glow */}
           <div className="absolute inset-0 bg-gradient-warm rounded-full blur-2xl opacity-35 scale-110" />
-          <BirdAnimation className="relative h-full w-full object-contain float-slow" speedMs={100} />
+          <BirdAnimation className="relative h-full w-full object-contain float-slow" speedMs={65} />
         </div>
         <div className="flex items-center gap-1.5 mt-2">
           <span className="h-2 w-2 rounded-full bg-brand-cyan animate-bounce [animation-delay:-0.3s]" />
