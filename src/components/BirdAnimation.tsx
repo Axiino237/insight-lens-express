@@ -10,13 +10,7 @@ export function BirdAnimation({ className = "h-10 w-10", speedMs = 45 }: BirdAni
 
   return (
     <div className={`${className} flex items-center justify-center overflow-hidden`}>
-      <div className="relative max-w-full max-h-full aspect-[256/144] overflow-hidden flex items-center justify-center">
-        {/* Invisible sizer SVG that scales naturally to fit the container bounds */}
-        <img
-          src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 144'%3E%3C/svg%3E"
-          alt=""
-          className="block max-w-full max-h-full h-auto w-auto pointer-events-none select-none opacity-0"
-        />
+      <div className="relative w-full h-full max-w-full max-h-full aspect-[256/144] overflow-hidden">
         {/* GPU-accelerated bird sprite sheet */}
         <img
           src={spriteWebp}
