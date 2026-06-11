@@ -13,6 +13,10 @@ export function BirdAnimation({ className = "h-10 w-10", speedMs = 45 }: BirdAni
       className={`${className} relative overflow-hidden`}
       style={{
         aspectRatio: "256 / 144",
+        transform: "translate3d(0, 0, 0)",
+        WebkitTransform: "translate3d(0, 0, 0)",
+        backfaceVisibility: "hidden",
+        WebkitBackfaceVisibility: "hidden",
       }}
     >
       {/* GPU-accelerated bird sprite sheet */}
@@ -23,8 +27,11 @@ export function BirdAnimation({ className = "h-10 w-10", speedMs = 45 }: BirdAni
         style={{
           width: "700%",
           transform: "translate3d(0%, 0, 0)",
+          WebkitTransform: "translate3d(0%, 0, 0)",
           willChange: "transform",
           animation: `playBirdTransform ${durationSec}s steps(7) infinite`,
+          backfaceVisibility: "hidden",
+          WebkitBackfaceVisibility: "hidden",
         }}
       />
     </div>
