@@ -5,11 +5,11 @@ import { useState, useEffect } from "react";
 // and increments by 1 for each new unique device that opens the site.
 // Returning visitors see the same count without incrementing.
 
-const STORAGE_KEY = "tfss_visitor_num";
-const COUNTED_KEY = "tfss_counted_v3";
+const STORAGE_KEY = "tfss_visitor_num_v2";
+const COUNTED_KEY = "tfss_counted_v4";
 
-// Seed: reflects approximate real visitors before this feature launched
-const SEED = 480;
+// Seed: start from 0
+const SEED = 0;
 
 function getOrInitCount(): number {
   try {
