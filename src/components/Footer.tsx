@@ -1,8 +1,11 @@
 import { Link } from "@tanstack/react-router";
-import { Instagram, Linkedin, Youtube, Mail, Phone, MapPin } from "lucide-react";
+import { Instagram, Linkedin, Youtube, Mail, Phone, MapPin, Eye } from "lucide-react";
 import logo from "@/assets/logo.png";
+import { useVisitorCount } from "@/hooks/useVisitorCount";
 
 export function Footer() {
+  const visitorCount = useVisitorCount();
+
   return (
     <footer className="relative mt-32 border-t border-border/50">
       <div className="mx-auto max-w-7xl px-4 py-16">
@@ -75,6 +78,24 @@ export function Footer() {
 
         <div className="mt-12 pt-6 border-t border-border/40 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
           <p>© {new Date().getFullYear()} The First Step Solutions. All rights reserved.</p>
+
+          {/* Visitor Counter */}
+          <div className="flex items-center gap-2 glass rounded-full px-4 py-1.5">
+            <Eye size={13} className="text-brand-cyan animate-pulse" />
+            <span className="tracking-wide">
+              {visitorCount === null ? (
+                <span className="opacity-50">counting...</span>
+              ) : (
+                <>
+                  <span className="font-semibold text-foreground tabular-nums">
+                    {visitorCount.toLocaleString()}
+                  </span>
+                  {" "}visitors
+                </>
+              )}
+            </span>
+          </div>
+
           <p>
             Developed by{" "}
             <a
@@ -91,3 +112,4 @@ export function Footer() {
     </footer>
   );
 }
+

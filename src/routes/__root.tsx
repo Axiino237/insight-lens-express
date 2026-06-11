@@ -80,6 +80,36 @@ function PendingComponent() {
 }
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
+  head: () => ({
+    meta: [
+      // Global: Geographic targeting — Chennai, India
+      { name: "geo.region", content: "IN-TN" },
+      { name: "geo.placename", content: "Chennai, Tamil Nadu, India" },
+      { name: "geo.position", content: "13.0289;80.1797" },
+      { name: "ICBM", content: "13.0289, 80.1797" },
+      // Global: Author / Brand identity
+      { name: "author", content: "The First Step Solutions" },
+      { name: "publisher", content: "The First Step Solutions" },
+      { name: "copyright", content: "The First Step Solutions" },
+      // Global: Crawler directives
+      { name: "robots", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
+      { name: "googlebot", content: "index, follow, max-snippet:-1, max-image-preview:large" },
+      { name: "revisit-after", content: "7 days" },
+      { name: "rating", content: "general" },
+      // Global: Language & locale
+      { httpEquiv: "content-language", content: "en-IN" },
+      { name: "language", content: "English" },
+      // Global: Theme color for mobile browsers
+      { name: "theme-color", content: "#0d0d1a" },
+      { name: "msapplication-TileColor", content: "#0d0d1a" },
+      // Global: Site verification (add real values when available)
+      // { name: "google-site-verification", content: "YOUR_VERIFY_CODE" },
+    ],
+    links: [
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+    ],
+  }),
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
   errorComponent: ErrorComponent,

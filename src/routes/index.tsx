@@ -14,19 +14,20 @@ import work6 from "@/assets/work-6.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "The First Step Solutions — Ideas. Innovation. Impact." },
-      { name: "description", content: "Award-winning event management & brand experience agency. Corporate events, brand activations, conferences, weddings & integrated communication." },
-      { name: "keywords", content: "event management company chennai, brand activation agency, corporate event organizers, exhibition stall fabrication, wedding planners chennai, mice tour planners, digital events india, the first step solutions, event organizers in chennai, best event planners in tamil nadu, exhibition booth designers, corporate summit planners, branding agency chennai, product launch organizers, experiential marketing agency, top event management companies in chennai, live sound and light setup chennai, expo stall builders india, corporate annual day event planner, business meet coordinators, customised exhibition stalls, custom fabrication, customized event stalls, fabric exhibition stands" },
-      { property: "og:title", content: "The First Step Solutions — Ideas. Innovation. Impact." },
-      { property: "og:description", content: "We turn ideas into experiences that move people and build brands. Leading event management and brand activation agency." },
+      { title: "The First Step Solutions — #1 Event Management Company in Chennai" },
+      { name: "description", content: "The First Step Solutions — Chennai's leading event management & brand experience agency. Corporate events, brand activations, MICE, weddings & exhibitions. 50+ events. 30+ brands. 4+ years. Call +91 44 3153 6968." },
+      { name: "keywords", content: "the first step solutions, first step solutions chennai, first step solutions event management, first step solutions brand activation, thefirststepsolutions.com, event management company chennai, top event management company in tamil nadu, best event company in chennai, brand activation agency india, corporate event organizers chennai, exhibition stall fabrication, wedding planners chennai, mice tour planners, digital events india, the first step solutions, event organizers in chennai, best event planners in tamil nadu, exhibition booth designers, corporate summit planners, branding agency chennai, product launch organizers, experiential marketing agency, top event management companies in chennai, live sound and light setup chennai, expo stall builders india, corporate annual day event planner, business meet coordinators, customised exhibition stalls, custom fabrication, customized event stalls, fabric exhibition stands, No.1 event company Chennai, first step solutions reviews" },
+      { property: "og:title", content: "The First Step Solutions — #1 Event Management Company in Chennai" },
+      { property: "og:description", content: "We turn ideas into experiences that move people and build brands. Chennai's premier event management and brand activation agency. 50+ events, 30+ brands." },
       { property: "og:url", content: "https://www.thefirststepsolutions.com/" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.thefirststepsolutions.com/logo.png" },
       { property: "og:site_name", content: "The First Step Solutions" },
-      { property: "og:locale", content: "en_US" },
+      { property: "og:locale", content: "en_IN" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "The First Step Solutions — Ideas. Innovation. Impact." },
-      { name: "twitter:description", content: "We turn ideas into experiences that move people and build brands. Leading event management and brand activation agency." },
+      { name: "twitter:site", content: "@thefirststepsolutions" },
+      { name: "twitter:title", content: "The First Step Solutions — #1 Event Management Company in Chennai" },
+      { name: "twitter:description", content: "We turn ideas into experiences that move people and build brands. Premier brand experience agency in Chennai." },
       { name: "twitter:image", content: "https://www.thefirststepsolutions.com/logo.png" },
     ],
     links: [
@@ -62,13 +63,27 @@ const clients = ["REL", "AQUA CLEAN", "CONCEPTION SOFTWARE TECHNOLOGY", "CM TECH
 
 const orgSchema = {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
+  "@type": ["ProfessionalService", "EventVenue"],
   "name": "The First Step Solutions",
+  "alternateName": ["First Step Solutions", "TFSS", "The First Step Solutions Chennai"],
+  "description": "Chennai's leading event management & brand experience agency specializing in corporate events, brand activations, MICE, weddings, and exhibition stall fabrication.",
   "image": "https://www.thefirststepsolutions.com/logo.png",
+  "logo": "https://www.thefirststepsolutions.com/logo.png",
   "@id": "https://www.thefirststepsolutions.com/#organization",
   "url": "https://www.thefirststepsolutions.com/",
   "telephone": "+914431536968",
+  "email": "hello@thefirststepsolutions.co",
   "priceRange": "$$",
+  "currenciesAccepted": "INR",
+  "paymentAccepted": "Cash, Bank Transfer, UPI",
+  "numberOfEmployees": { "@type": "QuantitativeValue", "value": 20 },
+  "foundingDate": "2022",
+  "areaServed": [
+    { "@type": "City", "name": "Chennai" },
+    { "@type": "City", "name": "Mumbai" },
+    { "@type": "State", "name": "Tamil Nadu" },
+    { "@type": "Country", "name": "India" }
+  ],
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Flat No. 27, 1st Street, Kothari Nagar, Annai Sathya Nagar Main Road, Ramapuram",
@@ -84,11 +99,16 @@ const orgSchema = {
   },
   "openingHoursSpecification": {
     "@type": "OpeningHoursSpecification",
-    "dayOfWeek": [
-      "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
-    ],
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
     "opens": "09:30",
     "closes": "18:30"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "bestRating": "5",
+    "worstRating": "1",
+    "ratingCount": "30"
   },
   "sameAs": [
     "https://www.instagram.com/thefirststepsolutions/",
@@ -101,7 +121,88 @@ const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "The First Step Solutions",
-  "url": "https://www.thefirststepsolutions.com/"
+  "url": "https://www.thefirststepsolutions.com/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://www.thefirststepsolutions.com/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+};
+
+const reviewSchema = {
+  "@context": "https://schema.org",
+  "@type": "Review",
+  "itemReviewed": {
+    "@type": "ProfessionalService",
+    "name": "The First Step Solutions"
+  },
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "5",
+    "bestRating": "5"
+  },
+  "name": "Extraordinary brand experience",
+  "author": { "@type": "Person", "name": "Elangovan" },
+  "reviewBody": "The First Step Solutions didn't just build our exhibition stall — they designed an extraordinary brand experience that became the absolute highlight of the venue. Their attention to detail drove massive footfall and engagement."
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is The First Step Solutions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The First Step Solutions (TFSS) is Chennai's leading event management and brand experience agency, founded in 2022. We specialize in corporate events, brand activations, MICE, weddings, and custom exhibition stall fabrication across India and globally."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where is The First Step Solutions located?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our head office is in Chennai, Tamil Nadu, India (Ramapuram, Chennai 600089). We also operate from Mumbai and serve clients across 7 cities in 3 countries."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What services does The First Step Solutions offer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We offer six core services: Brand Activation, Corporate Events, MICE & Conferences, Weddings & Celebrations, Creative & Production, and Digital & Hybrid Events. We also specialize in custom exhibition stall fabrication, 3D stall design, and product launches."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I contact The First Step Solutions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can reach us at +91 44 3153 6968, email hello@thefirststepsolutions.co, or visit our website at thefirststepsolutions.com. We respond to event briefs within 24 hours."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many events has The First Step Solutions delivered?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The First Step Solutions has successfully delivered 50+ events across 7 cities and 3 countries, serving 30+ brands over 4+ years."
+      }
+    }
+  ]
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.thefirststepsolutions.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.thefirststepsolutions.com/services" },
+    { "@type": "ListItem", "position": 3, "name": "Work", "item": "https://www.thefirststepsolutions.com/work" },
+    { "@type": "ListItem", "position": 4, "name": "About", "item": "https://www.thefirststepsolutions.com/about" },
+    { "@type": "ListItem", "position": 5, "name": "Contact", "item": "https://www.thefirststepsolutions.com/contact" }
+  ]
 };
 
 function Home() {
@@ -109,6 +210,9 @@ function Home() {
     <>
       <SchemaMarkup schema={orgSchema} />
       <SchemaMarkup schema={websiteSchema} />
+      <SchemaMarkup schema={reviewSchema} />
+      <SchemaMarkup schema={faqSchema} />
+      <SchemaMarkup schema={breadcrumbSchema} />
       {/* HERO */}
       <section className="relative noise-bg overflow-hidden">
         <div className="absolute inset-0 -z-10">

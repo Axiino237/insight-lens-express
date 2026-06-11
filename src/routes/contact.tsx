@@ -6,10 +6,10 @@ import { useState } from "react";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — The First Step Solutions" },
-      { name: "description", content: "Get in touch with The First Step Solutions. Submit your event brief, call our customer support at +91 44 3153 6968, or visit our office in Chennai." },
-      { name: "keywords", content: "contact the first step solutions, event support, event planners contact, chennai event managers phone, hire event agency, event management office address, request event quote, wedding planners contact number, stall fabrication query, book corporate event organizers, hire brand activation team, event budget estimator, customised stall fabrication inquiry" },
-      { property: "og:title", content: "Contact — The First Step Solutions" },
+      { title: "Contact The First Step Solutions — Chennai Event Agency" },
+      { name: "description", content: "Contact The First Step Solutions, Chennai's top event management agency. Call +91 44 3153 6968, email hello@thefirststepsolutions.co. Submit your event brief and we'll respond within 24 hours." },
+      { name: "keywords", content: "contact the first step solutions, first step solutions phone number, first step solutions email, first step solutions address chennai, event support, event planners contact, chennai event managers phone, hire event agency, event management office address, request event quote, wedding planners contact number, stall fabrication query, book corporate event organizers, hire brand activation team, event budget estimator, customised stall fabrication inquiry" },
+      { property: "og:title", content: "Contact The First Step Solutions — Chennai Event Agency" },
       { property: "og:description", content: "Let's build the next unforgettable brand experience. Send us your event brief." },
       { property: "og:url", content: "https://www.thefirststepsolutions.com/contact" },
       { property: "og:type", content: "website" },

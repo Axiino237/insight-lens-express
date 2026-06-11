@@ -5,10 +5,10 @@ import { ArrowRight, Megaphone, Calendar, Sparkles, Camera, Lightbulb, Globe2 } 
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Services — The First Step Solutions" },
-      { name: "description", content: "Explore our premium event services: Brand Activation, Corporate Events, global MICE, bespoke Weddings, Creative & Production, and Digital/Hybrid solutions." },
-      { name: "keywords", content: "brand activation agency chennai, corporate events management, MICE tour organizers, exhibition stall construction, wedding planning services, product launch event, digital hybrid events, bespoke wedding decorators, corporate conference planners, brand experiential popups, interactive virtual events, event stage design, sound and lighting rental for events, mall activation organizers, stall fabricator in mumbai, stall fabricator in bengaluru, corporate rewards and recognition organizers, custom trade show booths, customised stall design, exhibition fabrication, event fabrics and printing, custom stall setup" },
-      { property: "og:title", content: "Services — The First Step Solutions" },
+      { title: "Services — The First Step Solutions | Event Management Chennai" },
+      { name: "description", content: "The First Step Solutions offers premium event services in Chennai: Brand Activation, Corporate Events, MICE, Weddings, Creative Production & Digital/Hybrid solutions. India's full-service event agency." },
+      { name: "keywords", content: "the first step solutions services, first step solutions event services chennai, brand activation agency chennai, corporate events management, MICE tour organizers, exhibition stall construction, wedding planning services, product launch event, digital hybrid events, bespoke wedding decorators, corporate conference planners, brand experiential popups, interactive virtual events, event stage design, sound and lighting rental for events, mall activation organizers, stall fabricator in mumbai, stall fabricator in bengaluru, corporate rewards and recognition organizers, custom trade show booths, customised stall design, exhibition fabrication, event fabrics and printing, custom stall setup" },
+      { property: "og:title", content: "Services — The First Step Solutions | Event Management Chennai" },
       { property: "og:description", content: "Six disciplines, one creative powerhouse. Brand activation, corporate events, MICE, weddings, and digital experiences." },
       { property: "og:url", content: "https://www.thefirststepsolutions.com/services" },
       { property: "og:type", content: "website" },

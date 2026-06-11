@@ -5,11 +5,11 @@ import { ArrowRight } from "lucide-react";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — The First Step Solutions" },
-      { name: "description", content: "Learn about The First Step Solutions — a premier event management and brand experience agency built on ideas, innovation, and impact. Over 4 years of executing global corporate events." },
-      { name: "keywords", content: "about the first step solutions, event production agency, brand activation team, corporate event planners, event execution team chennai, global event managers, event management team profiles, professional event coordinators, creative directors events, event fabrication experts, experiential design agency, top event experts india, event operation logistics, experienced event managers chennai" },
-      { property: "og:title", content: "About — The First Step Solutions" },
-      { property: "og:description", content: "Learn about our philosophy: Ideas. Innovation. Impact. Premier brand experience agency with global footprint." },
+      { title: "About The First Step Solutions — Chennai's Premier Event Agency" },
+      { name: "description", content: "About The First Step Solutions — Chennai's top event management and brand experience agency. Founded 2022, we've grown to a team of producers, designers & technologists delivering 50+ events across 7 cities & 3 countries." },
+      { name: "keywords", content: "about the first step solutions, first step solutions team, first step solutions history, the first step solutions chennai, event production agency, brand activation team, corporate event planners, event execution team chennai, global event managers, event management team profiles, professional event coordinators, creative directors events, event fabrication experts, experiential design agency, top event experts india, event operation logistics, experienced event managers chennai, first step solutions founded 2022" },
+      { property: "og:title", content: "About The First Step Solutions — Chennai's Premier Event Agency" },
+      { property: "og:description", content: "Learn about our philosophy: Ideas. Innovation. Impact. Premier brand experience agency with global footprint. Est. 2022, Chennai." },
       { property: "og:url", content: "https://www.thefirststepsolutions.com/about" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.thefirststepsolutions.com/logo.png" },
