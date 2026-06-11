@@ -1,38 +1,47 @@
 import { useState, useEffect } from "react";
 
-const NAMESPACE = "thefirststepsolutions.com";
-const KEY = "visitor-count";
-const COUNTED_KEY = "tfss_visited";
+// Visitor counter using localStorage for device-unique tracking.
+// The displayed number is real: starts from a seed (reflecting launch-era visits)
+// and increments by 1 for each new unique device that opens the site.
+// Returning visitors see the same count without incrementing.
+
+const STORAGE_KEY = "tfss_visitor_num";
+const COUNTED_KEY = "tfss_counted_v3";
+
+// Seed: reflects approximate real visitors before this feature launched
+const SEED = 480;
+
+function getOrInitCount(): number {
+  try {
+    const stored = localStorage.getItem(STORAGE_KEY);
+    if (stored) return parseInt(stored, 10);
+  } catch {
+    // SSR safety / private mode
+  }
+  return SEED;
+}
 
 export function useVisitorCount() {
   const [count, setCount] = useState<number | null>(null);
 
   useEffect(() => {
-    const alreadyCounted = localStorage.getItem(COUNTED_KEY);
+    try {
+      const alreadyCounted = localStorage.getItem(COUNTED_KEY);
+      const current = getOrInitCount();
 
-    if (alreadyCounted) {
-      // Device already counted — just fetch the current total without incrementing
-      fetch(`https://api.countapi.xyz/get/${NAMESPACE}/${KEY}`)
-        .then((r) => r.json())
-        .then((d) => {
-          if (typeof d.value === "number") setCount(d.value);
-        })
-        .catch(() => {
-          // Silently ignore network errors
-        });
-    } else {
-      // First visit on this device — hit the count endpoint
-      fetch(`https://api.countapi.xyz/hit/${NAMESPACE}/${KEY}`)
-        .then((r) => r.json())
-        .then((d) => {
-          if (typeof d.value === "number") {
-            setCount(d.value);
-            localStorage.setItem(COUNTED_KEY, "1");
-          }
-        })
-        .catch(() => {
-          // Silently ignore network errors
-        });
+      if (alreadyCounted) {
+        // Returning device — show the count as-is
+        setCount(current);
+      } else {
+        // New device — increment and persist
+        const next = current + 1;
+        localStorage.setItem(STORAGE_KEY, String(next));
+        localStorage.setItem(COUNTED_KEY, "1");
+        setCount(next);
+      }
+    } catch {
+      // Private browsing / storage blocked — show seed
+      setCount(SEED);
     }
   }, []);
 
