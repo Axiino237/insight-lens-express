@@ -193,6 +193,26 @@
   .float-slow {
     animation: floaty 8s ease-in-out infinite;
   }
+  .animate-scroll-up {
+    animation: scrollUp 35s linear infinite;
+    will-change: transform;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+  }
+  .animate-scroll-down {
+    animation: scrollDown 35s linear infinite;
+    will-change: transform;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+  }
+  @keyframes scrollUp {
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(0, -50%, 0); }
+  }
+  @keyframes scrollDown {
+    0% { transform: translate3d(0, -50%, 0); }
+    100% { transform: translate3d(0, 0, 0); }
+  }
 }
 
 @keyframes floaty {

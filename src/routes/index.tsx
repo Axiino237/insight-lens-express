@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout } from "@/components/Layout";
-import { ArrowRight, Sparkles, Megaphone, Calendar, Camera, Lightbulb, Globe2, Star } from "lucide-react";
+import { ArrowRight, Sparkles, Megaphone, Calendar, Camera, Lightbulb, Globe2, Star, Hammer } from "lucide-react";
 import { ThreeDModel } from "@/components/ThreeDModel";
 import { SchemaMarkup } from "@/components/SchemaMarkup";
 import heroEvent from "@/assets/hero-event.jpg";
@@ -10,6 +10,7 @@ import work3 from "@/assets/work-3.jpg";
 import work4 from "@/assets/work-4.jpg";
 import work5 from "@/assets/work-5.jpg";
 import work6 from "@/assets/work-6.jpg";
+import stallFabricationWork from "@/assets/stall-fabrication.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -42,6 +43,7 @@ export const Route = createFileRoute("/")({
 });
 
 const services = [
+  { icon: Hammer, title: "Stall Fabrication", desc: "Custom exhibition booths & trade show stalls designed and built for maximum engagement." },
   { icon: Megaphone, title: "Brand Activation", desc: "Live, breathing experiences that turn audiences into advocates." },
   { icon: Calendar, title: "Corporate Events", desc: "Conferences, summits & town-halls executed with cinematic precision." },
   { icon: Sparkles, title: "MICE & Conferences", desc: "End-to-end meetings, incentives & exhibitions across the globe." },
@@ -51,6 +53,7 @@ const services = [
 ];
 
 const projects = [
+  { img: stallFabricationWork, title: "Polystone Expo Stall", tag: "Stall Fabrication" },
   { img: work1, title: "Pixel Bloom Activation", tag: "Brand Activation" },
   { img: work2, title: "Vision 2030 Summit", tag: "Conference" },
   { img: work3, title: "Aurum Awards Night", tag: "Awards" },
@@ -171,7 +174,7 @@ const faqSchema = {
       "name": "What services does The First Step Solutions offer?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "We offer six core services: Brand Activation, Corporate Events, MICE & Conferences, Weddings & Celebrations, Creative & Production, and Digital & Hybrid Events. We also specialize in custom exhibition stall fabrication, 3D stall design, and product launches."
+        "text": "We offer seven core services: Brand Activation, Corporate Events, MICE & Conferences, Weddings & Celebrations, Creative & Production, Stall Fabrication, and Digital & Hybrid Events. We also specialize in custom exhibition stall fabrication, 3D stall design, and product launches."
       }
     },
     {
@@ -307,7 +310,7 @@ function Home() {
             <div>
               <p className="text-xs uppercase tracking-[0.3em] text-brand-cyan mb-3">What we do</p>
               <h2 className="font-display text-4xl md:text-6xl font-extrabold leading-tight max-w-3xl">
-                Six disciplines.<br />
+                Seven disciplines.<br />
                 <span className="text-gradient-brand">One creative powerhouse.</span>
               </h2>
             </div>
@@ -326,9 +329,10 @@ function Home() {
                 "from-brand-magenta to-brand-blue",
                 "from-brand-yellow to-brand-orange",
                 "from-brand-blue to-brand-magenta",
-              ][i % 6];
+                "from-brand-cyan to-brand-green",
+              ][i % 7];
               return (
-                <div key={s.title} className="group relative glass rounded-3xl p-8 hover:bg-white/10 transition overflow-hidden">
+                <div key={s.title} className={`group relative glass rounded-3xl p-8 hover:bg-white/10 transition overflow-hidden ${i === 0 ? "md:col-span-2 lg:col-span-3" : ""}`}>
                   <div className={`absolute -top-20 -right-20 h-44 w-44 rounded-full bg-gradient-to-br ${accent} opacity-20 group-hover:opacity-40 blur-3xl transition`} />
                   <div className={`relative inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br ${accent} text-white shadow-glow`}>
                     <Icon size={26} />
@@ -361,13 +365,13 @@ function Home() {
             {projects.map((p, i) => (
               <div
                 key={p.title}
-                className={`group relative overflow-hidden rounded-3xl ${i === 0 ? "lg:col-span-2 lg:row-span-2" : ""}`}
+                className={`group relative overflow-hidden rounded-3xl ${i === 0 ? "lg:col-span-2 lg:row-span-2" : i === 6 ? "lg:col-span-3" : ""}`}
               >
                 <img
                   src={p.img}
                   alt={p.title}
                   loading="lazy"
-                  className={`w-full object-cover transition-transform duration-700 group-hover:scale-105 ${i === 0 ? "h-[400px] lg:h-full" : "h-72"}`}
+                  className={`w-full object-cover transition-transform duration-700 group-hover:scale-105 ${i === 0 ? "h-[400px] lg:h-full" : i === 6 ? "h-72 lg:h-[350px]" : "h-72"}`}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6">

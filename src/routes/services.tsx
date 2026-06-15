@@ -1,15 +1,15 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout } from "@/components/Layout";
-import { ArrowRight, Megaphone, Calendar, Sparkles, Camera, Lightbulb, Globe2 } from "lucide-react";
+import { ArrowRight, Megaphone, Calendar, Sparkles, Camera, Lightbulb, Globe2, Hammer } from "lucide-react";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
       { title: "Services — The First Step Solutions | Event Management Chennai" },
-      { name: "description", content: "The First Step Solutions offers premium event services in Chennai: Brand Activation, Corporate Events, MICE, Weddings, Creative Production & Digital/Hybrid solutions. India's full-service event agency." },
+      { name: "description", content: "The First Step Solutions offers premium event services in Chennai: Brand Activation, Corporate Events, MICE, Weddings, Stall Fabrication, Creative Production & Digital/Hybrid solutions. India's full-service event agency." },
       { name: "keywords", content: "the first step solutions services, first step solutions event services chennai, brand activation agency chennai, corporate events management, MICE tour organizers, exhibition stall construction, wedding planning services, product launch event, digital hybrid events, bespoke wedding decorators, corporate conference planners, brand experiential popups, interactive virtual events, event stage design, sound and lighting rental for events, mall activation organizers, stall fabricator in mumbai, stall fabricator in bengaluru, corporate rewards and recognition organizers, custom trade show booths, customised stall design, exhibition fabrication, event fabrics and printing, custom stall setup" },
       { property: "og:title", content: "Services — The First Step Solutions | Event Management Chennai" },
-      { property: "og:description", content: "Six disciplines, one creative powerhouse. Brand activation, corporate events, MICE, weddings, and digital experiences." },
+      { property: "og:description", content: "Seven disciplines, one creative powerhouse. Brand activation, corporate events, MICE, weddings, stall fabrication, and digital experiences." },
       { property: "og:url", content: "https://www.thefirststepsolutions.com/services" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.thefirststepsolutions.com/logo.png" },
@@ -17,7 +17,7 @@ export const Route = createFileRoute("/services")({
       { property: "og:locale", content: "en_US" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Services — The First Step Solutions" },
-      { name: "twitter:description", content: "Six disciplines, one creative powerhouse. Brand activation, corporate events, MICE, weddings, and digital experiences." },
+      { name: "twitter:description", content: "Seven disciplines, one creative powerhouse. Brand activation, corporate events, MICE, weddings, stall fabrication, and digital experiences." },
       { name: "twitter:image", content: "https://www.thefirststepsolutions.com/logo.png" },
     ],
     links: [
@@ -32,6 +32,7 @@ export const Route = createFileRoute("/services")({
 });
 
 const services = [
+  { icon: Hammer, title: "Stall Fabrication", desc: "Custom exhibition booths, custom trade show stalls, and 3D architectural designs engineered for maximum brand visibility.", color: "from-brand-cyan to-brand-green" },
   { icon: Megaphone, title: "Brand Activation", desc: "Pop-ups, mall takeovers, influencer ignitions and on-ground spectacles that move stock and shift perception.", color: "from-brand-orange to-brand-magenta" },
   { icon: Calendar, title: "Corporate Events", desc: "Town-halls, annual days, R&Rs and partner meets, choreographed for purpose and produced for prime-time.", color: "from-brand-cyan to-brand-blue" },
   { icon: Sparkles, title: "MICE & Conferences", desc: "Multi-day summits, global exhibitions and international incentive travel — logistics, content and creative under one roof.", color: "from-brand-green to-brand-cyan" },
@@ -59,10 +60,10 @@ function Services() {
 
       <section className="pb-24">
         <div className="mx-auto max-w-7xl px-4 grid gap-6 md:grid-cols-2">
-          {services.map((s) => {
+          {services.map((s, i) => {
             const Icon = s.icon;
             return (
-              <div key={s.title} className="group relative glass rounded-3xl p-10 overflow-hidden">
+              <div key={s.title} className={`group relative glass rounded-3xl p-10 overflow-hidden ${i === 0 ? "md:col-span-2" : ""}`}>
                 <div className={`absolute -top-20 -right-20 h-48 w-48 rounded-full bg-gradient-to-br ${s.color} opacity-20 group-hover:opacity-50 blur-3xl transition`} />
                 <div className={`relative inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br ${s.color} text-white shadow-glow`}>
                   <Icon size={28} />
