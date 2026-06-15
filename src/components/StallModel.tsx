@@ -28,7 +28,7 @@ function StallLoader() {
         Loading Polystone Compounds
       </h3>
       <p className="text-xs text-muted-foreground mt-2 max-w-xs leading-relaxed">
-        Streaming the 3D Polystone Compounds asset (68MB). This may take a moment depending on your disk/connection speed.
+        Streaming the 3D Polystone Compounds asset (9.5MB). This may take a moment depending on your disk/connection speed.
       </p>
       
       {/* Progress bar indicator */}

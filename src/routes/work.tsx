@@ -119,19 +119,19 @@ function Work() {
 
             <div className="grid grid-cols-2 md:grid-cols-3 gap-6 h-full">
               {/* Column 1 - scrolls up */}
-              <div 
-                style={{ transform: "translateZ(0)" }} 
+              <div
+                style={{ transform: "translateZ(0)" }}
                 className="flex flex-col gap-6 animate-scroll-up hover:[animation-play-state:paused] cursor-pointer"
               >
                 {[
                   stall1, stall2, stall3, stall4, stall5
                 ].map((img, idx) => (
                   <div key={`col1-${idx}`} className="overflow-hidden rounded-2xl border border-white/5 shadow-card group/img">
-                    <img 
-                      src={img} 
+                    <img
+                      src={img}
                       alt="Exhibition Stall Design"
                       loading="lazy"
-                      className="w-full h-48 md:h-64 object-cover transition-transform duration-500 group-hover/img:scale-110" 
+                      className="w-full h-48 md:h-64 object-cover transition-transform duration-500 group-hover/img:scale-110"
                     />
                   </div>
                 ))}
@@ -140,30 +140,30 @@ function Work() {
                   stall1, stall2, stall3, stall4, stall5
                 ].map((img, idx) => (
                   <div key={`col1-dup-${idx}`} className="overflow-hidden rounded-2xl border border-white/5 shadow-card group/img">
-                    <img 
-                      src={img} 
+                    <img
+                      src={img}
                       alt="Exhibition Stall Design"
                       loading="lazy"
-                      className="w-full h-48 md:h-64 object-cover transition-transform duration-500 group-hover/img:scale-110" 
+                      className="w-full h-48 md:h-64 object-cover transition-transform duration-500 group-hover/img:scale-110"
                     />
                   </div>
                 ))}
               </div>
 
               {/* Column 2 - scrolls down */}
-              <div 
-                style={{ transform: "translateZ(0)" }} 
+              <div
+                style={{ transform: "translateZ(0)" }}
                 className="flex flex-col gap-6 animate-scroll-down hover:[animation-play-state:paused] cursor-pointer"
               >
                 {[
                   stall6, stall7, stall8, stall9, stall10
                 ].map((img, idx) => (
                   <div key={`col2-${idx}`} className="overflow-hidden rounded-2xl border border-white/5 shadow-card group/img">
-                    <img 
-                      src={img} 
+                    <img
+                      src={img}
                       alt="Exhibition Stall Design"
                       loading="lazy"
-                      className="w-full h-48 md:h-64 object-cover transition-transform duration-500 group-hover/img:scale-110" 
+                      className="w-full h-48 md:h-64 object-cover transition-transform duration-500 group-hover/img:scale-110"
                     />
                   </div>
                 ))}
@@ -172,30 +172,30 @@ function Work() {
                   stall6, stall7, stall8, stall9, stall10
                 ].map((img, idx) => (
                   <div key={`col2-dup-${idx}`} className="overflow-hidden rounded-2xl border border-white/5 shadow-card group/img">
-                    <img 
-                      src={img} 
+                    <img
+                      src={img}
                       alt="Exhibition Stall Design"
                       loading="lazy"
-                      className="w-full h-48 md:h-64 object-cover transition-transform duration-500 group-hover/img:scale-110" 
+                      className="w-full h-48 md:h-64 object-cover transition-transform duration-500 group-hover/img:scale-110"
                     />
                   </div>
                 ))}
               </div>
 
               {/* Column 3 - scrolls up (hidden on mobile, visible on md+) */}
-              <div 
-                style={{ transform: "translateZ(0)" }} 
+              <div
+                style={{ transform: "translateZ(0)" }}
                 className="hidden md:flex flex-col gap-6 animate-scroll-up hover:[animation-play-state:paused] cursor-pointer"
               >
                 {[
                   stall11, stall12, stall13, stall14
                 ].map((img, idx) => (
                   <div key={`col3-${idx}`} className="overflow-hidden rounded-2xl border border-white/5 shadow-card group/img">
-                    <img 
-                      src={img} 
+                    <img
+                      src={img}
                       alt="Exhibition Stall Design"
                       loading="lazy"
-                      className="w-full h-48 md:h-64 object-cover transition-transform duration-500 group-hover/img:scale-110" 
+                      className="w-full h-48 md:h-64 object-cover transition-transform duration-500 group-hover/img:scale-110"
                     />
                   </div>
                 ))}
@@ -204,11 +204,11 @@ function Work() {
                   stall11, stall12, stall13, stall14
                 ].map((img, idx) => (
                   <div key={`col3-dup-${idx}`} className="overflow-hidden rounded-2xl border border-white/5 shadow-card group/img">
-                    <img 
-                      src={img} 
+                    <img
+                      src={img}
                       alt="Exhibition Stall Design"
                       loading="lazy"
-                      className="w-full h-48 md:h-64 object-cover transition-transform duration-500 group-hover/img:scale-110" 
+                      className="w-full h-48 md:h-64 object-cover transition-transform duration-500 group-hover/img:scale-110"
                     />
                   </div>
                 ))}
