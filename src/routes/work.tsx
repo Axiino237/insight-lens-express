@@ -92,7 +92,14 @@ function Work() {
                   autoPlay
                   loop
                   playsInline
+                  onPlay={(e) => {
+                    e.currentTarget.playbackRate = 1.75;
+                  }}
+                  onLoadedMetadata={(e) => {
+                    e.currentTarget.playbackRate = 1.75;
+                  }}
                   onTimeUpdate={(e) => {
+                    e.currentTarget.playbackRate = 1.75;
                     if (e.currentTarget.currentTime >= 30) {
                       e.currentTarget.currentTime = 0;
                     }
