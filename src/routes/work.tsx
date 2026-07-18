@@ -8,7 +8,7 @@ import work4 from "@/assets/work-4.jpg";
 import work5 from "@/assets/work-5.jpg";
 import work6 from "@/assets/work-6.jpg";
 import stallFabricationWork from "@/assets/stall-fabrication.jpg";
-import video1 from "@/assets/videos/DJI_20260701175410_0161_D.webm";
+import video1 from "@/assets/videos/DJI_20260701175410_0161_D.mp4";
 import stall1 from "@/assets/stall/IMG-20240419-WA0082.jpg";
 import stall2 from "@/assets/stall/IMG-20240419-WA0083.jpg";
 import stall3 from "@/assets/stall/IMG-20240419-WA0088.jpg";
