@@ -33,3 +33,6 @@ dist-ssr
 
 # 3D Model and Backups
 src/assets/logo_backup.png
+
+# Media files
+src/assets/videos/

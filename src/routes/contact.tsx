@@ -46,7 +46,7 @@ function Contact() {
         </div>
       </section>
 
-      <section className="pb-24">
+      <section className="pt-16 pb-24">
         <div className="mx-auto max-w-7xl px-4 grid lg:grid-cols-5 gap-10">
           <div className="lg:col-span-3 glass rounded-3xl p-8 md:p-12">
             {sent ? (
@@ -105,9 +105,47 @@ function Contact() {
           </div>
 
           <div className="lg:col-span-2 space-y-4">
-            <InfoCard icon={Mail} title="Email" lines={["hello@thefirststepsolutions.co"]} accent="text-brand-orange" />
-            <InfoCard icon={Phone} title="Call" lines={["+91 44 3153 6968", "Mon–Sat · 9:30am to 6.30pm IST"]} accent="text-brand-cyan" />
-            <InfoCard icon={MapPin} title="Visit" lines={["Flat No. 27, 1st Street, Kothari Nagar,", "Annai Sathya Nagar Main Road,", "Ramapuram, Chennai 600089, India"]} accent="text-brand-magenta" />
+            <InfoCard 
+              icon={Mail} 
+              title="Email" 
+              lines={["hello@thefirststepsolutions.com"]} 
+              accent="text-brand-orange" 
+              link="mailto:hello@thefirststepsolutions.com"
+            />
+            <InfoCard 
+              icon={Phone} 
+              title="Call" 
+              lines={[
+                "+91 44 3153 6968",
+                "+91 72004 95699",
+                "+91 93449 83802",
+                "Mon–Sat · 9:30am to 6.30pm IST"
+              ]} 
+              accent="text-brand-cyan" 
+            />
+            <InfoCard 
+              icon={MapPin} 
+              title="Visit" 
+              lines={["Flat No. 27, 1st Street, Kothari Nagar,", "Annai Sathya Nagar Main Road,", "Ramapuram, Chennai 600089, India"]} 
+              accent="text-brand-magenta" 
+              link="https://www.google.com/maps/search/?api=1&query=13.036249450670583,80.18479590559821"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* GOOGLE MAP SECTION */}
+      <section className="pb-24">
+        <div className="mx-auto max-w-7xl px-4">
+          <div className="relative overflow-hidden rounded-3xl border border-border/40 bg-black/40 p-1 md:p-2 shadow-card">
+            <iframe 
+              src="https://maps.google.com/maps?q=13.036249450670583,80.18479590559821&z=17&output=embed" 
+              className="w-full h-[350px] md:h-[450px] rounded-2xl border-0 opacity-80 hover:opacity-100 transition-opacity duration-300"
+              allowFullScreen
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade"
+              title="The First Step Solutions Office Location"
+            />
           </div>
         </div>
       </section>
@@ -130,16 +168,40 @@ function Field({ label, id, type = "text", required }: { label: string; id: stri
   );
 }
 
-function InfoCard({ icon: Icon, title, lines, accent }: { icon: typeof Mail; title: string; lines: string[]; accent: string }) {
+function InfoCard({ 
+  icon: Icon, 
+  title, 
+  lines, 
+  accent, 
+  link 
+}: { 
+  icon: typeof Mail; 
+  title: string; 
+  lines: string[]; 
+  accent: string; 
+  link?: string; 
+}) {
+  const content = (
+    <>
+      {lines.map((l) => (
+        <p key={l} className={`text-sm text-muted-foreground ${link ? "hover:text-brand-cyan transition-colors" : ""}`}>{l}</p>
+      ))}
+    </>
+  );
+
   return (
     <div className="glass rounded-2xl p-6">
       <div className={`inline-flex h-10 w-10 rounded-xl glass items-center justify-center ${accent}`}>
         <Icon size={18} />
       </div>
       <h3 className="font-display text-lg font-bold mt-3">{title}</h3>
-      {lines.map((l) => (
-        <p key={l} className="text-sm text-muted-foreground">{l}</p>
-      ))}
+      {link ? (
+        <a href={link} target="_blank" rel="noopener noreferrer" className="block mt-1">
+          {content}
+        </a>
+      ) : (
+        <div className="mt-1">{content}</div>
+      )}
     </div>
   );
 }

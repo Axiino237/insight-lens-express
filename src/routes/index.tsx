@@ -11,6 +11,8 @@ import work4 from "@/assets/work-4.jpg";
 import work5 from "@/assets/work-5.jpg";
 import work6 from "@/assets/work-6.jpg";
 import stallFabricationWork from "@/assets/stall-fabrication.jpg";
+import video1 from "@/assets/videos/DJI_20260701175410_0161_D.webm";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -53,7 +55,7 @@ const services = [
 ];
 
 const projects = [
-  { img: stallFabricationWork, title: "Polystone Expo Stall", tag: "Stall Fabrication" },
+  { img: stallFabricationWork, video: video1, title: "Polystone Expo Stall", tag: "Stall Fabrication" },
   { img: work1, title: "Pixel Bloom Activation", tag: "Brand Activation" },
   { img: work2, title: "Vision 2030 Summit", tag: "Conference" },
   { img: work3, title: "Aurum Awards Night", tag: "Awards" },
@@ -114,7 +116,7 @@ const orgSchema = {
     "ratingCount": "30"
   },
   "sameAs": [
-    "https://www.instagram.com/thefirststepsolutions/",
+    "https://www.instagram.com/the_first_step_solutions/",
     "https://www.linkedin.com/company/the-first-step-solutions/",
     "https://www.youtube.com/@thefirststepsolutions"
   ]
@@ -182,7 +184,7 @@ const faqSchema = {
       "name": "How do I contact The First Step Solutions?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "You can reach us at +91 44 3153 6968, email hello@thefirststepsolutions.co, or visit our website at thefirststepsolutions.com. We respond to event briefs within 24 hours."
+        "text": "You can reach us at +91 44 3153 6968, email hello@thefirststepsolutions.com, or visit our website at thefirststepsolutions.com. We respond to event briefs within 24 hours."
       }
     },
     {
@@ -367,12 +369,29 @@ function Home() {
                 key={p.title}
                 className={`group relative overflow-hidden rounded-3xl ${i === 0 ? "lg:col-span-2 lg:row-span-2" : i === 6 ? "lg:col-span-3" : ""}`}
               >
-                <img
-                  src={p.img}
-                  alt={p.title}
-                  loading="lazy"
-                  className={`w-full object-cover transition-transform duration-700 group-hover:scale-105 ${i === 0 ? "h-[400px] lg:h-full" : i === 6 ? "h-72 lg:h-[350px]" : "h-72"}`}
-                />
+                {p.video ? (
+                  <video
+                    src={p.video}
+                    poster={p.img}
+                    muted
+                    autoPlay
+                    loop
+                    playsInline
+                    onTimeUpdate={(e) => {
+                      if (e.currentTarget.currentTime >= 30) {
+                        e.currentTarget.currentTime = 0;
+                      }
+                    }}
+                    className={`w-full object-cover transition-transform duration-700 group-hover:scale-105 ${i === 0 ? "h-[400px] lg:h-full" : i === 6 ? "h-72 lg:h-[350px]" : "h-72"}`}
+                  />
+                ) : (
+                  <img
+                    src={p.img}
+                    alt={p.title}
+                    loading="lazy"
+                    className={`w-full object-cover transition-transform duration-700 group-hover:scale-105 ${i === 0 ? "h-[400px] lg:h-full" : i === 6 ? "h-72 lg:h-[350px]" : "h-72"}`}
+                  />
+                )}
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6">
                   <span className="inline-block text-xs uppercase tracking-widest text-brand-yellow mb-2">{p.tag}</span>

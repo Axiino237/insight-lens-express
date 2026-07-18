@@ -76,16 +76,16 @@ export function Chatbot() {
     }
 
     if (text.includes("price") || text.includes("cost") || text.includes("charge") || text.includes("budget") || text.includes("quote") || text.includes("rate") || text.includes("fee")) {
-      return "Our service pricing is customized based on your project scale, location, design complexity, and fabrication materials. Please reach out to customer support at +91 44 3153 6968 or email us at hello@thefirststepsolutions.co for a customized quote!";
+      return "Our service pricing is customized based on your project scale, location, design complexity, and fabrication materials. Please reach out to customer support at +91 44 3153 6968 or email us at hello@thefirststepsolutions.com for a customized quote!";
     }
     if (text.includes("location") || text.includes("address") || text.includes("office") || text.includes("where are you") || text.includes("chennai") || text.includes("mumbai") || text.includes("dubai") || text.includes("bengaluru")) {
       return "We are headquartered in Chennai (Ramapuram), with offices in Mumbai, Bengaluru, and Dubai. We plan, execute, and deliver events globally! You can find our main address under 'Visit' on our contact page.";
     }
     if (text.includes("contact") || text.includes("phone") || text.includes("number") || text.includes("call") || text.includes("email") || text.includes("support") || text.includes("reach")) {
-      return "You can contact our support team at +91 44 3153 6968 or email hello@thefirststepsolutions.co. We are active Mon-Sat, 9:30 AM to 6:30 PM IST, and respond within 24 hours!";
+      return "You can contact our support team at +91 44 3153 6968, +91 72004 95699, or +91 93449 83802, or email hello@thefirststepsolutions.com. We are active Mon-Sat, 9:30 AM to 6:30 PM IST, and respond within 24 hours!";
     }
 
-    return "I couldn't find a direct match for your request about our services. Please call customer support at +91 44 3153 6968 or email us at hello@thefirststepsolutions.co for details!";
+    return "I couldn't find a direct match for your request about our services. Please call customer support at +91 44 3153 6968 or email us at hello@thefirststepsolutions.com for details!";
   };
 
   const quickPrompts = [

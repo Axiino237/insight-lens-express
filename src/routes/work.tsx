@@ -8,6 +8,7 @@ import work4 from "@/assets/work-4.jpg";
 import work5 from "@/assets/work-5.jpg";
 import work6 from "@/assets/work-6.jpg";
 import stallFabricationWork from "@/assets/stall-fabrication.jpg";
+import video1 from "@/assets/videos/DJI_20260701175410_0161_D.webm";
 import stall1 from "@/assets/stall/IMG-20240419-WA0082.jpg";
 import stall2 from "@/assets/stall/IMG-20240419-WA0083.jpg";
 import stall3 from "@/assets/stall/IMG-20240419-WA0088.jpg";
@@ -53,7 +54,7 @@ export const Route = createFileRoute("/work")({
 });
 
 const projects = [
-  { img: stallFabricationWork, title: "Polystone Expo Stall", tag: "Stall Fabrication", year: "2024", client: "Polystone Compounds" },
+  { img: stallFabricationWork, video: video1, title: "Polystone Expo Stall", tag: "Stall Fabrication", year: "2024", client: "Polystone Compounds" },
   { img: work1, title: "Pixel Bloom Activation", tag: "Brand Activation", year: "2025", client: "Aurora Tech" },
   { img: work2, title: "Vision 2030 Summit", tag: "Conference", year: "2024", client: "Helix Group" },
   { img: work3, title: "Aurum Awards Night", tag: "Awards", year: "2024", client: "FICCI" },
@@ -61,6 +62,7 @@ const projects = [
   { img: work5, title: "The Anaya Wedding", tag: "Wedding", year: "2024", client: "Private" },
   { img: work6, title: "Helix Product Launch", tag: "Product Launch", year: "2025", client: "Helix Mobility" },
 ];
+
 
 function Work() {
   return (
@@ -82,12 +84,29 @@ function Work() {
               key={p.title}
               className={`group relative overflow-hidden rounded-3xl ${i % 3 === 0 ? "md:col-span-2" : ""}`}
             >
-              <img
-                src={p.img}
-                alt={p.title}
-                loading="lazy"
-                className="w-full h-[420px] object-cover transition-transform duration-700 group-hover:scale-105"
-              />
+              {p.video ? (
+                <video
+                  src={p.video}
+                  poster={p.img}
+                  muted
+                  autoPlay
+                  loop
+                  playsInline
+                  onTimeUpdate={(e) => {
+                    if (e.currentTarget.currentTime >= 30) {
+                      e.currentTarget.currentTime = 0;
+                    }
+                  }}
+                  className="w-full h-[420px] object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              ) : (
+                <img
+                  src={p.img}
+                  alt={p.title}
+                  loading="lazy"
+                  className="w-full h-[420px] object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              )}
               <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
               <div className="absolute bottom-0 inset-x-0 p-8 flex flex-wrap items-end justify-between gap-3">
                 <div>
@@ -99,7 +118,7 @@ function Work() {
         </div>
       </section>
 
-      {/* STALL FABRICATION VERTICAL SCROLL GALLERY */}
+      {/* STALL FABRICATION HORIZONTAL SCROLL GALLERY */}
       <section className="py-24 border-y border-border/40 overflow-hidden relative bg-gradient-to-b from-transparent via-card/10 to-transparent">
         <div className="mx-auto max-w-7xl px-4">
           <div className="max-w-3xl mb-12">
@@ -108,25 +127,22 @@ function Work() {
               Exhibition Stalls <span className="text-gradient-warm">Brought to Life</span>
             </h2>
             <p className="mt-4 text-muted-foreground text-base md:text-lg leading-relaxed">
-              Take a look at some of the custom-built exhibition stands and brand showcase booths we have designed and fabricated. Hover over any column to pause the scrolling.
+              Take a look at some of the custom-built exhibition stands and brand showcase booths we have designed and fabricated. Hover to pause the scrolling.
             </p>
           </div>
 
-          <div className="relative h-[650px] overflow-hidden rounded-3xl border border-border/40 bg-black/40 px-4 md:px-8 py-4">
-            {/* Ambient gradients */}
-            <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-background to-transparent z-10 pointer-events-none" />
-            <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-background to-transparent z-10 pointer-events-none" />
+          <div className="relative overflow-hidden rounded-3xl border border-border/40 bg-black/40 py-8">
+            {/* Ambient horizontal gradients */}
+            <div className="absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
+            <div className="absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
 
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-6 h-full">
-              {/* Column 1 - scrolls up */}
-              <div
-                style={{ transform: "translateZ(0)" }}
-                className="flex flex-col gap-6 animate-scroll-up hover:[animation-play-state:paused] cursor-pointer"
-              >
+            <div className="overflow-hidden w-full relative">
+              <div className="flex gap-6 animate-marquee-left hover-pause cursor-pointer">
                 {[
-                  stall1, stall2, stall3, stall4, stall5
+                  stall1, stall2, stall3, stall4, stall5, stall6, stall7,
+                  stall8, stall9, stall10, stall11, stall12, stall13, stall14
                 ].map((img, idx) => (
-                  <div key={`col1-${idx}`} className="overflow-hidden rounded-2xl border border-white/5 shadow-card group/img">
+                  <div key={`row-${idx}`} className="flex-shrink-0 w-72 md:w-96 overflow-hidden rounded-2xl border border-white/5 shadow-card group/img">
                     <img
                       src={img}
                       alt="Exhibition Stall Design"
@@ -137,73 +153,10 @@ function Work() {
                 ))}
                 {/* Duplicate for infinite loop */}
                 {[
-                  stall1, stall2, stall3, stall4, stall5
+                  stall1, stall2, stall3, stall4, stall5, stall6, stall7,
+                  stall8, stall9, stall10, stall11, stall12, stall13, stall14
                 ].map((img, idx) => (
-                  <div key={`col1-dup-${idx}`} className="overflow-hidden rounded-2xl border border-white/5 shadow-card group/img">
-                    <img
-                      src={img}
-                      alt="Exhibition Stall Design"
-                      loading="lazy"
-                      className="w-full h-48 md:h-64 object-cover transition-transform duration-500 group-hover/img:scale-110"
-                    />
-                  </div>
-                ))}
-              </div>
-
-              {/* Column 2 - scrolls down */}
-              <div
-                style={{ transform: "translateZ(0)" }}
-                className="flex flex-col gap-6 animate-scroll-down hover:[animation-play-state:paused] cursor-pointer"
-              >
-                {[
-                  stall6, stall7, stall8, stall9, stall10
-                ].map((img, idx) => (
-                  <div key={`col2-${idx}`} className="overflow-hidden rounded-2xl border border-white/5 shadow-card group/img">
-                    <img
-                      src={img}
-                      alt="Exhibition Stall Design"
-                      loading="lazy"
-                      className="w-full h-48 md:h-64 object-cover transition-transform duration-500 group-hover/img:scale-110"
-                    />
-                  </div>
-                ))}
-                {/* Duplicate for infinite loop */}
-                {[
-                  stall6, stall7, stall8, stall9, stall10
-                ].map((img, idx) => (
-                  <div key={`col2-dup-${idx}`} className="overflow-hidden rounded-2xl border border-white/5 shadow-card group/img">
-                    <img
-                      src={img}
-                      alt="Exhibition Stall Design"
-                      loading="lazy"
-                      className="w-full h-48 md:h-64 object-cover transition-transform duration-500 group-hover/img:scale-110"
-                    />
-                  </div>
-                ))}
-              </div>
-
-              {/* Column 3 - scrolls up (hidden on mobile, visible on md+) */}
-              <div
-                style={{ transform: "translateZ(0)" }}
-                className="hidden md:flex flex-col gap-6 animate-scroll-up hover:[animation-play-state:paused] cursor-pointer"
-              >
-                {[
-                  stall11, stall12, stall13, stall14
-                ].map((img, idx) => (
-                  <div key={`col3-${idx}`} className="overflow-hidden rounded-2xl border border-white/5 shadow-card group/img">
-                    <img
-                      src={img}
-                      alt="Exhibition Stall Design"
-                      loading="lazy"
-                      className="w-full h-48 md:h-64 object-cover transition-transform duration-500 group-hover/img:scale-110"
-                    />
-                  </div>
-                ))}
-                {/* Duplicate for infinite loop */}
-                {[
-                  stall11, stall12, stall13, stall14
-                ].map((img, idx) => (
-                  <div key={`col3-dup-${idx}`} className="overflow-hidden rounded-2xl border border-white/5 shadow-card group/img">
+                  <div key={`row-dup-${idx}`} className="flex-shrink-0 w-72 md:w-96 overflow-hidden rounded-2xl border border-white/5 shadow-card group/img">
                     <img
                       src={img}
                       alt="Exhibition Stall Design"
@@ -217,6 +170,7 @@ function Work() {
           </div>
         </div>
       </section>
+
 
       {/* 3D MODEL SECTION */}
       <section className="py-24 border-t border-border/40 bg-gradient-to-b from-transparent to-card/10">
