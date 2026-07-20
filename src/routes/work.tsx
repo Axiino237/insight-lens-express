@@ -8,7 +8,7 @@ import work4 from "@/assets/work-4.jpg";
 import work5 from "@/assets/work-5.jpg";
 import work6 from "@/assets/work-6.jpg";
 import stallFabricationWork from "@/assets/stall-fabrication.jpg";
-import video1 from "@/assets/videos/DJI_20260701175410_0161_D.mp4";
+import video1 from "@/assets/videos/temp_cropped.webm";
 import stall1 from "@/assets/stall/IMG-20240419-WA0082.jpg";
 import stall2 from "@/assets/stall/IMG-20240419-WA0083.jpg";
 import stall3 from "@/assets/stall/IMG-20240419-WA0088.jpg";
@@ -68,8 +68,8 @@ function Work() {
   return (
     <>
       <section className="noise-bg">
-        <div className="mx-auto max-w-7xl px-4 py-20 md:py-28">
-          <p className="text-xs uppercase tracking-[0.3em] text-brand-magenta mb-4">Selected work</p>
+        <div className="mx-auto max-w-7xl px-4 pt-6 pb-16 md:pt-10 md:pb-24">
+          <p className="text-xs uppercase tracking-[0.3em] text-brand-magenta mb-6">Selected work</p>
           <h1 className="font-display text-5xl md:text-7xl font-extrabold leading-[0.95] max-w-5xl">
             <span className="text-gradient-warm">1,200+ events.</span><br />
             Here are a few favourites.
@@ -77,8 +77,8 @@ function Work() {
         </div>
       </section>
 
-      <section className="pb-24">
-        <div className="mx-auto max-w-7xl px-4 grid gap-6 md:grid-cols-2">
+      <section className="pt-10 pb-32 md:pt-14 md:pb-40">
+        <div className="mx-auto max-w-7xl px-4 grid gap-10 md:gap-14 md:grid-cols-2">
           {projects.map((p, i) => (
             <article
               key={p.title}
@@ -92,19 +92,8 @@ function Work() {
                   autoPlay
                   loop
                   playsInline
-                  onPlay={(e) => {
-                    e.currentTarget.playbackRate = 1.75;
-                  }}
-                  onLoadedMetadata={(e) => {
-                    e.currentTarget.playbackRate = 1.75;
-                  }}
-                  onTimeUpdate={(e) => {
-                    e.currentTarget.playbackRate = 1.75;
-                    if (e.currentTarget.currentTime >= 30) {
-                      e.currentTarget.currentTime = 0;
-                    }
-                  }}
-                  className="w-full h-[420px] object-cover transition-transform duration-700 group-hover:scale-105"
+                  preload="auto"
+                  className="w-full h-[420px] md:h-[480px] object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               ) : (
                 <img
@@ -126,14 +115,14 @@ function Work() {
       </section>
 
       {/* STALL FABRICATION HORIZONTAL SCROLL GALLERY */}
-      <section className="py-24 border-y border-border/40 overflow-hidden relative bg-gradient-to-b from-transparent via-card/10 to-transparent">
+      <section className="py-28 md:py-36 border-y border-border/40 overflow-hidden relative bg-gradient-to-b from-transparent via-card/10 to-transparent">
         <div className="mx-auto max-w-7xl px-4">
-          <div className="max-w-3xl mb-12">
-            <p className="text-xs uppercase tracking-[0.3em] text-brand-magenta mb-3">Our Fabrication Craft</p>
+          <div className="max-w-3xl mb-14">
+            <p className="text-xs uppercase tracking-[0.3em] text-brand-magenta mb-4">Our Fabrication Craft</p>
             <h2 className="font-display text-4xl md:text-6xl font-extrabold leading-tight">
               Exhibition Stalls <span className="text-gradient-warm">Brought to Life</span>
             </h2>
-            <p className="mt-4 text-muted-foreground text-base md:text-lg leading-relaxed">
+            <p className="mt-6 text-muted-foreground text-base md:text-lg leading-relaxed">
               Take a look at some of the custom-built exhibition stands and brand showcase booths we have designed and fabricated. Hover to pause the scrolling.
             </p>
           </div>
@@ -180,7 +169,7 @@ function Work() {
 
 
       {/* 3D MODEL SECTION */}
-      <section className="py-24 border-t border-border/40 bg-gradient-to-b from-transparent to-card/10">
+      <section className="py-28 md:py-36 border-t border-border/40 bg-gradient-to-b from-transparent to-card/10">
         <div className="mx-auto max-w-7xl px-4">
           <div className="max-w-3xl mb-12">
             <p className="text-xs uppercase tracking-[0.3em] text-brand-cyan mb-3">Interactive Exhibition Design</p>

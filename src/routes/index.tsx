@@ -11,7 +11,7 @@ import work4 from "@/assets/work-4.jpg";
 import work5 from "@/assets/work-5.jpg";
 import work6 from "@/assets/work-6.jpg";
 import stallFabricationWork from "@/assets/stall-fabrication.jpg";
-import video1 from "@/assets/videos/DJI_20260701175410_0161_D.mp4";
+import video1 from "@/assets/videos/temp_cropped.webm";
 
 
 export const Route = createFileRoute("/")({
@@ -377,18 +377,7 @@ function Home() {
                     autoPlay
                     loop
                     playsInline
-                    onPlay={(e) => {
-                      e.currentTarget.playbackRate = 1.75;
-                    }}
-                    onLoadedMetadata={(e) => {
-                      e.currentTarget.playbackRate = 1.75;
-                    }}
-                    onTimeUpdate={(e) => {
-                      e.currentTarget.playbackRate = 1.75;
-                      if (e.currentTarget.currentTime >= 30) {
-                        e.currentTarget.currentTime = 0;
-                      }
-                    }}
+                    preload="auto"
                     className={`w-full object-cover transition-transform duration-700 group-hover:scale-105 ${i === 0 ? "h-[400px] lg:h-full" : i === 6 ? "h-72 lg:h-[350px]" : "h-72"}`}
                   />
                 ) : (

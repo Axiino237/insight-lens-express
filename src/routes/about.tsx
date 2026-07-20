@@ -42,13 +42,13 @@ function About() {
   return (
     <>
       <section className="relative noise-bg">
-        <div className="mx-auto max-w-7xl px-4 py-20 md:py-28">
-          <p className="text-xs uppercase tracking-[0.3em] text-brand-cyan mb-4">About us</p>
+        <div className="mx-auto max-w-7xl px-4 pt-6 pb-16 md:pt-10 md:pb-24">
+          <p className="text-xs uppercase tracking-[0.3em] text-brand-cyan mb-6">About us</p>
           <h1 className="font-display text-5xl md:text-7xl font-extrabold leading-[0.95] max-w-5xl">
             A creative collective<br />
             obsessed with <span className="text-gradient-brand">the live moment.</span>
           </h1>
-          <p className="mt-8 max-w-3xl text-lg text-muted-foreground leading-relaxed">
+          <p className="mt-10 max-w-3xl text-lg text-muted-foreground leading-relaxed">
             The First Step Solutions is a premier brand experience and event agency with a global reach.
             Since our inception, we have grown into a diverse team of producers,
             designers, technologists, and dreamers — building unforgettable moments

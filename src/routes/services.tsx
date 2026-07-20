@@ -45,21 +45,21 @@ function Services() {
   return (
     <>
       <section className="noise-bg">
-        <div className="mx-auto max-w-7xl px-4 py-20 md:py-28">
-          <p className="text-xs uppercase tracking-[0.3em] text-brand-orange mb-4">Services</p>
+        <div className="mx-auto max-w-7xl px-4 pt-6 pb-16 md:pt-10 md:pb-24">
+          <p className="text-xs uppercase tracking-[0.3em] text-brand-orange mb-6">Services</p>
           <h1 className="font-display text-5xl md:text-7xl font-extrabold leading-[0.95] max-w-5xl">
             Everything live.<br />
             <span className="text-gradient-brand">All under one roof.</span>
           </h1>
-          <p className="mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed">
+          <p className="mt-8 max-w-2xl text-lg text-muted-foreground leading-relaxed">
             Strategy, creative, production and execution — by the same team,
             from kick-off to curtain call.
           </p>
         </div>
       </section>
 
-      <section className="pb-24">
-        <div className="mx-auto max-w-7xl px-4 grid gap-6 md:grid-cols-2">
+      <section className="pt-10 pb-32 md:pt-14 md:pb-40">
+        <div className="mx-auto max-w-7xl px-4 grid gap-10 md:gap-14 md:grid-cols-2">
           {services.map((s, i) => {
             const Icon = s.icon;
             return (

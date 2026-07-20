@@ -37,8 +37,8 @@ function Contact() {
   return (
     <>
       <section className="noise-bg">
-        <div className="mx-auto max-w-7xl px-4 py-20 md:py-28">
-          <p className="text-xs uppercase tracking-[0.3em] text-brand-cyan mb-4">Get in touch</p>
+        <div className="mx-auto max-w-7xl px-4 pt-6 pb-16 md:pt-10 md:pb-24">
+          <p className="text-xs uppercase tracking-[0.3em] text-brand-cyan mb-6">Get in touch</p>
           <h1 className="font-display text-5xl md:text-7xl font-extrabold leading-[0.95] max-w-4xl">
             Tell us about<br />
             <span className="text-gradient-brand">your next moment.</span>
@@ -46,7 +46,7 @@ function Contact() {
         </div>
       </section>
 
-      <section className="pt-16 pb-24">
+      <section className="pt-10 pb-32 md:pt-14 md:pb-40">
         <div className="mx-auto max-w-7xl px-4 grid lg:grid-cols-5 gap-10">
           <div className="lg:col-span-3 glass rounded-3xl p-8 md:p-12">
             {sent ? (
