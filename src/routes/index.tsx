@@ -64,7 +64,7 @@ const projects = [
   { img: work6, title: "Helix Product Launch", tag: "Product Launch" },
 ];
 
-const clients = ["REL", "AQUA CLEAN", "CONCEPTION SOFTWARE TECHNOLOGY", "CM TECHNO", "MEKARK", "ORG ENGITECH", "JETPRO", "MAXIO INDUSTRIES PVT. LTD."];
+import { brandLogos } from "@/data/brandLogos";
 
 const orgSchema = {
   "@context": "https://schema.org",
@@ -293,14 +293,22 @@ function Home() {
 
       {/* CLIENTS MARQUEE */}
       <section className="py-12 border-y border-border/40 overflow-hidden">
-        <p className="text-center text-xs uppercase tracking-[0.4em] text-muted-foreground mb-6">
+        <p className="text-center text-xs uppercase tracking-[0.4em] text-muted-foreground mb-8">
           Trusted by industry leaders
         </p>
-        <div className="flex marquee gap-16 whitespace-nowrap">
-          {[...clients, ...clients].map((c, i) => (
-            <span key={i} className="font-display text-2xl md:text-3xl font-bold text-muted-foreground/60 hover:text-foreground transition">
-              {c}
-            </span>
+        <div className="flex marquee w-max gap-8 items-center whitespace-nowrap hover-pause">
+          {[...brandLogos, ...brandLogos].map((logo, i) => (
+            <div
+              key={`${logo.id}-${i}`}
+              className="inline-flex items-center justify-center shrink-0 w-36 h-20 md:w-44 md:h-24 p-3 rounded-2xl bg-white shadow-sm border border-white/20 transition-all duration-300 hover:scale-105 hover:shadow-glow group"
+            >
+              <img
+                src={logo.src}
+                alt={logo.alt}
+                loading="lazy"
+                className="max-h-full max-w-full object-contain filter contrast-105 transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
           ))}
         </div>
       </section>

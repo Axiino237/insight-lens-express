@@ -32,8 +32,17 @@ export default defineConfig({
     emptyOutDir: true,
   },
   server: {
+    port: 3000,
     watch: {
-      ignored: ["**/*.glb", "**/*.mp4", "**/*.MP4", "**/src/assets/Bird/**", "**/src/assets/videos/**"],
+      ignored: [
+        "**/src/assets/**",
+        "**/*.glb",
+        "**/*.mp4",
+        "**/*.MP4",
+        "**/*.jpg",
+        "**/*.jpeg",
+        "**/*.png",
+      ],
     },
   },
 });
