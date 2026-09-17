@@ -300,13 +300,14 @@ function Home() {
           {[...brandLogos, ...brandLogos].map((logo, i) => (
             <div
               key={`${logo.id}-${i}`}
-              className="inline-flex items-center justify-center shrink-0 w-36 h-20 md:w-44 md:h-24 p-3 rounded-2xl bg-white shadow-sm border border-white/20 transition-all duration-300 hover:scale-105 hover:shadow-glow group"
+              style={logo.cardBg ? { backgroundColor: logo.cardBg } : undefined}
+              className={`inline-flex items-center justify-center shrink-0 w-36 h-20 md:w-44 md:h-24 ${logo.cardClassName?.includes('p-') ? '' : 'p-3'} rounded-2xl ${logo.cardClassName?.includes('bg-') ? '' : 'bg-white'} shadow-sm border border-white/20 transition-all duration-300 hover:scale-105 hover:shadow-glow group overflow-hidden ${logo.cardClassName || ""}`}
             >
               <img
                 src={logo.src}
                 alt={logo.alt}
                 loading="lazy"
-                className="max-h-full max-w-full object-contain filter contrast-105 transition-transform duration-300 group-hover:scale-105"
+                className={`max-h-full max-w-full object-contain filter contrast-105 transition-transform duration-300 group-hover:scale-105 ${logo.imageClassName || ""}`}
               />
             </div>
           ))}

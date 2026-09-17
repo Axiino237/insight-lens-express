@@ -35,13 +35,9 @@ export default defineConfig({
     port: 3000,
     watch: {
       ignored: [
-        "**/src/assets/**",
         "**/*.glb",
         "**/*.mp4",
         "**/*.MP4",
-        "**/*.jpg",
-        "**/*.jpeg",
-        "**/*.png",
       ],
     },
   },

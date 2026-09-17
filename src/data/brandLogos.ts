@@ -21,25 +21,95 @@ export interface BrandLogo {
   id: number;
   src: string;
   alt: string;
+  cardBg?: string;
+  cardClassName?: string;
+  imageClassName?: string;
 }
 
 export const brandLogos: BrandLogo[] = [
-  { id: 1, src: logo1, alt: "Amvi Brand Logo" },
-  { id: 2, src: logo2, alt: "Brand Partner Logo" },
+  {
+    id: 1,
+    src: logo1,
+    alt: "Amvi",
+    imageClassName: "scale-[1.02] md:scale-[1.05]",
+  },
+  {
+    id: 2,
+    src: logo2,
+    alt: "Simmac",
+    imageClassName: "scale-[1.05] md:scale-[1.1]",
+  },
   { id: 3, src: logo3, alt: "Brand Partner Logo" },
   { id: 4, src: logo4, alt: "Brand Partner Logo" },
-  { id: 5, src: logo5, alt: "Brand Partner Logo" },
+  {
+    id: 5,
+    src: logo5,
+    alt: "Jital",
+    imageClassName: "scale-[1.1] md:scale-[1.15]",
+  },
   { id: 6, src: logo6, alt: "Brand Partner Logo" },
-  { id: 7, src: logo7, alt: "Brand Partner Logo" },
-  { id: 8, src: logo8, alt: "Brand Partner Logo" },
-  { id: 9, src: logo9, alt: "Brand Partner Logo" },
+  {
+    id: 7,
+    src: logo7,
+    alt: "Brand Partner Logo",
+    imageClassName: "scale-[1.1] md:scale-[1.15]",
+  },
+  {
+    id: 8,
+    src: logo8,
+    alt: "Brand Partner Logo",
+    imageClassName: "scale-[1.08] md:scale-[1.12]",
+  },
+  {
+    id: 9,
+    src: logo9,
+    alt: "GECO Crusher",
+    imageClassName: "scale-[1.15] md:scale-[1.2]",
+  },
   { id: 10, src: logo10, alt: "Brand Partner Logo" },
-  { id: 11, src: logo11, alt: "Brand Partner Logo" },
-  { id: 12, src: logo12, alt: "Brand Partner Logo" },
-  { id: 13, src: logo13, alt: "Brand Partner Logo" },
+  {
+    id: 11,
+    src: logo11,
+    alt: "Mekark",
+    cardBg: "#ed1b24",
+    cardClassName: "!bg-[#ed1b24] border-red-500/30",
+    imageClassName: "scale-[1.1] md:scale-[1.15]",
+  },
+  {
+    id: 12,
+    src: logo12,
+    alt: "Brand Partner Logo",
+    imageClassName: "scale-[1.08] md:scale-[1.12]",
+  },
+  {
+    id: 13,
+    src: logo13,
+    alt: "Unique Equipments",
+    imageClassName: "scale-[1.14] md:scale-[1.18] translate-y-[3px]",
+  },
   { id: 14, src: logo14, alt: "Brand Partner Logo" },
-  { id: 15, src: logo15, alt: "Brand Partner Logo" },
-  { id: 16, src: logo16, alt: "Brand Partner Logo" },
-  { id: 17, src: logo17, alt: "Brand Partner Logo" },
-  { id: 18, src: logo18, alt: "Brand Partner Logo" },
+  {
+    id: 15,
+    src: logo15,
+    alt: "Brand Partner Logo",
+    imageClassName: "scale-[1.08] md:scale-[1.12]",
+  },
+  {
+    id: 16,
+    src: logo16,
+    alt: "Janatha Agro",
+    imageClassName: "scale-[1.02] md:scale-[1.05]",
+  },
+  {
+    id: 17,
+    src: logo17,
+    alt: "Madhuli Industries",
+    imageClassName: "scale-[1.02] md:scale-[1.05]",
+  },
+  {
+    id: 18,
+    src: logo18,
+    alt: "Brand Partner Logo",
+    imageClassName: "scale-[1.1] md:scale-[1.15] translate-x-[3px]",
+  },
 ];
