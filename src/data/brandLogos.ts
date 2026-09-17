@@ -85,7 +85,7 @@ export const brandLogos: BrandLogo[] = [
     id: 13,
     src: logo13,
     alt: "Unique Equipments",
-    imageClassName: "scale-[1.14] md:scale-[1.18] translate-y-[3px]",
+    imageClassName: "scale-[1.28] md:scale-[1.35] translate-y-[1px]",
   },
   { id: 14, src: logo14, alt: "Brand Partner Logo" },
   {
