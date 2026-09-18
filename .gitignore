@@ -37,3 +37,7 @@ src/assets/logo_backup.png
 # Media files
 src/assets/videos/*
 !src/assets/videos/temp_cropped.webm
+
+# Large 3D Models
+public/3.glb
+

@@ -1,9 +1,7 @@
 import logo1 from "@/assets/brand logo/amvi logo.jpg.jpeg";
 import logo2 from "@/assets/brand logo/WhatsApp Image 2026-09-16 at 12.50.12 PM (1).jpeg";
-import logo3 from "@/assets/brand logo/WhatsApp Image 2026-09-16 at 12.50.12 PM (2).jpeg";
 import logo4 from "@/assets/brand logo/WhatsApp Image 2026-09-16 at 12.50.12 PM (3).jpeg";
 import logo5 from "@/assets/brand logo/WhatsApp Image 2026-09-16 at 12.50.12 PM.jpeg";
-import logo6 from "@/assets/brand logo/WhatsApp Image 2026-09-16 at 12.50.13 PM (1).jpeg";
 import logo7 from "@/assets/brand logo/WhatsApp Image 2026-09-16 at 12.50.13 PM (10).jpeg";
 import logo8 from "@/assets/brand logo/WhatsApp Image 2026-09-16 at 12.50.13 PM (11).jpeg";
 import logo9 from "@/assets/brand logo/WhatsApp Image 2026-09-16 at 12.50.13 PM (13).jpeg";
@@ -16,6 +14,15 @@ import logo15 from "@/assets/brand logo/WhatsApp Image 2026-09-16 at 12.50.13 PM
 import logo16 from "@/assets/brand logo/WhatsApp Image 2026-09-16 at 12.50.13 PM (8).jpeg";
 import logo17 from "@/assets/brand logo/WhatsApp Image 2026-09-16 at 12.50.13 PM (9).jpeg";
 import logo18 from "@/assets/brand logo/WhatsApp Image 2026-09-16 at 12.50.13 PM.jpeg";
+import logo19 from "@/assets/brand logo/WhatsApp Image 2026-09-18 at 12.27.20 PM.jpeg";
+import logo20 from "@/assets/brand logo/WhatsApp Image 2026-09-18 at 12.35.21 PM.jpeg";
+import logo21 from "@/assets/brand logo/WhatsApp Image 2026-09-18 at 12.36.54 PM.jpeg";
+import logo22 from "@/assets/brand logo/WhatsApp Image 2026-09-18 at 12.38.00 PM.jpeg";
+import logo23 from "@/assets/brand logo/WhatsApp Image 2026-09-18 at 12.40.50 PM.jpeg";
+import logo24 from "@/assets/brand logo/WhatsApp Image 2026-09-18 at 12.45.58 PM.jpeg";
+import logo25 from "@/assets/brand logo/WhatsApp Image 2026-09-18 at 12.46.43 PM.jpeg";
+import logo26 from "@/assets/brand logo/WhatsApp Image 2026-09-18 at 12.50.36 PM.png";
+import logo27 from "@/assets/brand logo/WhatsApp Image 2026-09-18 at 12.52.42 PM.jpeg";
 
 export interface BrandLogo {
   id: number;
@@ -39,7 +46,6 @@ export const brandLogos: BrandLogo[] = [
     alt: "Simmac",
     imageClassName: "scale-[1.05] md:scale-[1.1]",
   },
-  { id: 3, src: logo3, alt: "Brand Partner Logo" },
   { id: 4, src: logo4, alt: "Brand Partner Logo" },
   {
     id: 5,
@@ -47,7 +53,6 @@ export const brandLogos: BrandLogo[] = [
     alt: "Jital",
     imageClassName: "scale-[1.1] md:scale-[1.15]",
   },
-  { id: 6, src: logo6, alt: "Brand Partner Logo" },
   {
     id: 7,
     src: logo7,
@@ -111,5 +116,61 @@ export const brandLogos: BrandLogo[] = [
     src: logo18,
     alt: "Brand Partner Logo",
     imageClassName: "scale-[1.1] md:scale-[1.15] translate-x-[3px]",
+  },
+  {
+    id: 19,
+    src: logo19,
+    alt: "IFAFEA",
+    imageClassName: "scale-[1.08] md:scale-[1.12]",
+  },
+  {
+    id: 20,
+    src: logo20,
+    alt: "Tapco",
+    imageClassName: "scale-[1.05] md:scale-[1.1]",
+  },
+  {
+    id: 21,
+    src: logo21,
+    alt: "Crane Smith",
+    imageClassName: "scale-[1.1] md:scale-[1.15]",
+  },
+  {
+    id: 22,
+    src: logo22,
+    alt: "CM Techno",
+    imageClassName: "scale-[1.15] md:scale-[1.2]",
+  },
+  {
+    id: 23,
+    src: logo23,
+    alt: "Agua Clan",
+    imageClassName: "scale-[1.1] md:scale-[1.15]",
+  },
+  {
+    id: 24,
+    src: logo24,
+    alt: "Global Kitchen Equipments",
+    imageClassName: "scale-[1.05] md:scale-[1.1]",
+  },
+  {
+    id: 25,
+    src: logo25,
+    alt: "Febtech",
+    imageClassName: "scale-[1.08] md:scale-[1.15]",
+  },
+  {
+    id: 26,
+    src: logo26,
+    alt: "REL",
+    cardBg: "#374151",
+    cardClassName: "!bg-[#374151] border-gray-600/40",
+    imageClassName: "scale-[1.08] md:scale-[1.12]",
+  },
+  {
+    id: 27,
+    src: logo27,
+    alt: "Flowlines Engineering",
+    imageClassName: "scale-[1.1] md:scale-[1.18]",
   },
 ];
