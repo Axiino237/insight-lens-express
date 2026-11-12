@@ -20,14 +20,26 @@ export function Footer() {
               </span>
             </div>
             <p className="mt-4 max-w-md text-sm text-muted-foreground leading-relaxed">
-              Ideas. Innovation. Impact. We craft unforgettable brand experiences,
-              corporate events and integrated communication for ambitious brands.
+              Ideas. Innovation. Impact. We craft unforgettable brand experiences, corporate events
+              and integrated communication for ambitious brands.
             </p>
             <div className="mt-6 flex gap-3">
               {[
-                { Icon: Instagram, label: "Instagram", href: "https://www.instagram.com/the_first_step_solutions/" },
-                { Icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/company/the-first-step-solutions/" },
-                { Icon: Youtube, label: "YouTube", href: "https://www.youtube.com/@thefirststepsolutions" },
+                {
+                  Icon: Instagram,
+                  label: "Instagram",
+                  href: "https://www.instagram.com/the_first_step_solutions/",
+                },
+                {
+                  Icon: Linkedin,
+                  label: "LinkedIn",
+                  href: "https://www.linkedin.com/company/the-first-step-solutions/",
+                },
+                {
+                  Icon: Youtube,
+                  label: "YouTube",
+                  href: "https://www.youtube.com/@thefirststepsolutions",
+                },
               ].map(({ Icon, label, href }) => (
                 <a
                   key={label}
@@ -44,32 +56,59 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4 text-sm uppercase tracking-wider text-muted-foreground">Explore</h4>
+            <h4 className="font-semibold mb-4 text-sm uppercase tracking-wider text-muted-foreground">
+              Explore
+            </h4>
             <ul className="space-y-2 text-sm">
-              <li><Link to="/about" className="hover:text-brand-cyan transition">About</Link></li>
-              <li><Link to="/services" className="hover:text-brand-cyan transition">Services</Link></li>
-              <li><Link to="/work" className="hover:text-brand-cyan transition">Work</Link></li>
-              <li><Link to="/contact" className="hover:text-brand-cyan transition">Contact</Link></li>
+              <li>
+                <Link to="/about" className="hover:text-brand-cyan transition">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link to="/services" className="hover:text-brand-cyan transition">
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/work" className="hover:text-brand-cyan transition">
+                  Work
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="hover:text-brand-cyan transition">
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4 text-sm uppercase tracking-wider text-muted-foreground">Reach Us</h4>
+            <h4 className="font-semibold mb-4 text-sm uppercase tracking-wider text-muted-foreground">
+              Reach Us
+            </h4>
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li className="flex gap-2">
                 <MapPin size={16} className="text-brand-magenta mt-0.5 shrink-0" />
-                <a 
-                  href="https://www.google.com/maps/search/?api=1&query=13.036249450670583,80.18479590559821" 
-                  target="_blank" 
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=13.036249450670583,80.18479590559821"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-brand-cyan transition-colors"
                 >
-                  Flat No. 27, 1st Street, Kothari Nagar,<br />Annai Sathya Nagar Main Road,<br />Ramapuram, Chennai 600089
+                  Flat No. 27, 1st Street, Kothari Nagar,
+                  <br />
+                  Annai Sathya Nagar Main Road,
+                  <br />
+                  Ramapuram, Chennai 600089
                 </a>
               </li>
               <li className="flex gap-2">
                 <Mail size={16} className="text-brand-orange mt-0.5" />
-                <a href="mailto:hello@thefirststepsolutions.com" className="hover:text-brand-cyan transition">
+                <a
+                  href="mailto:hello@thefirststepsolutions.com"
+                  className="hover:text-brand-cyan transition"
+                >
                   hello@thefirststepsolutions.com
                 </a>
               </li>
@@ -92,7 +131,17 @@ export function Footer() {
         </div>
 
         <div className="mt-12 pt-6 border-t border-border/40 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
-          <p>© {new Date().getFullYear()} The First Step Solutions. All rights reserved.</p>
+          <div className="flex items-center gap-2">
+            <p>© {new Date().getFullYear()} The First Step Solutions. All rights reserved.</p>
+            <span className="opacity-30">·</span>
+            <Link
+              to="/admin"
+              className="opacity-40 hover:opacity-100 hover:text-foreground transition-opacity"
+              title="Admin Portal"
+            >
+              Admin
+            </Link>
+          </div>
 
           {/* Visitor Counter */}
           <div className="flex items-center gap-2 glass rounded-full px-4 py-1.5">
@@ -104,8 +153,8 @@ export function Footer() {
                 <>
                   <span className="font-semibold text-foreground tabular-nums">
                     {visitorCount.toLocaleString()}
-                  </span>
-                  {" "}visitors
+                  </span>{" "}
+                  visitors
                 </>
               )}
             </span>
@@ -127,4 +176,3 @@ export function Footer() {
     </footer>
   );
 }
-

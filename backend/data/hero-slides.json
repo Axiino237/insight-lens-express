@@ -1,0 +1,30 @@
+[
+  {
+    "id": "slide_1",
+    "badge": "★ Flagship Fabrication",
+    "tag": "Exhibition Architecture · Auto Expo",
+    "title": "AeroTech 360° Custom Modular Stall",
+    "subtitle": "Turnkey 3D Exhibition Pavilion",
+    "desc": "Custom-engineered modular exhibition architecture with precision steel-truss framing, edge-lit fabric displays, and an immersive central product demonstration lounge designed for high footfall and brand engagement.",
+    "footprint": "12m × 8m",
+    "structure": "Double-Decker",
+    "format": "Island Pavilion",
+    "image": "default_hero_1",
+    "accent": "from-brand-orange to-brand-magenta",
+    "createdAt": "2026-11-10T10:00:00.000Z"
+  },
+  {
+    "id": "slide_2",
+    "badge": "★ Bespoke Staging",
+    "tag": "Precision Engineering · IMTEX Global",
+    "title": "Eppinger High-Precision Tooling Stall",
+    "subtitle": "Ergonomic B2B Showcase Architecture",
+    "desc": "Futuristic architectural geometry featuring continuous overhead cantilever fascia, integrated recessed downlighting, and ergonomic presentation counters tailored for live B2B client meetings and live machinery display.",
+    "footprint": "15m × 10m",
+    "structure": "Cantilever Fascia",
+    "format": "Dual-Corner Open",
+    "image": "default_hero_2",
+    "accent": "from-brand-cyan to-brand-blue",
+    "createdAt": "2026-11-10T10:00:00.000Z"
+  }
+]

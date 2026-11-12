@@ -1,0 +1,110 @@
+[
+  {
+    "id": "work_1",
+    "name": "AeroTech 360° Industrial Booth",
+    "client": "ELGi Compressors",
+    "place": "Codissia Trade Fair Complex, Coimbatore",
+    "date": "October 2024",
+    "time": "4-Day Exhibition",
+    "size": "12m × 8m (96 sq.m)",
+    "stallType": "Island Pavilion",
+    "image": "/stall/IMG-20240419-WA0082.jpg",
+    "images": [
+      "/stall/IMG-20240419-WA0082.jpg",
+      "/stall/IMG-20240419-WA0083.jpg",
+      "/stall/IMG-20240419-WA0088.jpg"
+    ],
+    "description": "Turnkey four-side open exhibition pavilion featuring heavy machinery load-bearing flooring, overhead tension fabric hanging banner, and VIP meeting lounge.",
+    "createdAt": "2026-11-10T10:00:00.000Z"
+  },
+  {
+    "id": "work_2",
+    "name": "Precision Engineering Expo Pavilion",
+    "client": "SEPPINGER Machinery",
+    "place": "Chennai Trade Centre, Nandambakkam",
+    "date": "August 2024",
+    "time": "3-Day Trade Show",
+    "size": "10m × 6m (60 sq.m)",
+    "stallType": "3-Side Open",
+    "image": "/stall/IMG-20240419-WA0083.jpg",
+    "images": [
+      "/stall/IMG-20240419-WA0083.jpg",
+      "/stall/IMG-20240419-WA0108.jpg",
+      "/stall/IMG-20240419-WA0082.jpg"
+    ],
+    "description": "Custom modular stall with architectural edge-lit acrylic portals, interactive touch kiosks, and seamless CNC-finished reception counters.",
+    "createdAt": "2026-11-10T10:00:00.000Z"
+  },
+  {
+    "id": "work_3",
+    "name": "Revathi Heavy Drilling Experience Stall",
+    "client": "Revathi Equipment India Ltd.",
+    "place": "Pragati Maidan, New Delhi",
+    "date": "December 2024",
+    "time": "5-Day International Expo",
+    "size": "15m × 10m (150 sq.m)",
+    "stallType": "Double-Decker",
+    "image": "/stall/IMG-20240419-WA0088.jpg",
+    "images": [
+      "/stall/IMG-20240419-WA0088.jpg",
+      "/stall/IMG-20250702-WA0053.jpg",
+      "/stall/IMG-20240419-WA0082.jpg"
+    ],
+    "description": "Premium double-deck fabrication with upper-tier executive conference room, downstairs scale equipment demonstration, and warm corporate lighting.",
+    "createdAt": "2026-11-10T10:00:00.000Z"
+  },
+  {
+    "id": "work_4",
+    "name": "Acoustic & Vibration Technology Showcase",
+    "client": "Conceptia Marine",
+    "place": "BIEC, Bengaluru",
+    "date": "November 2024",
+    "time": "3-Day Summit",
+    "size": "8m × 6m (48 sq.m)",
+    "stallType": "Custom Fabrication",
+    "image": "/stall/IMG-20240419-WA0108.jpg",
+    "images": [
+      "/stall/IMG-20240419-WA0108.jpg",
+      "/stall/IMG-20250702-WA0054.jpg",
+      "/stall/IMG-20240419-WA0083.jpg"
+    ],
+    "description": "High-contrast matte black and cyan illuminated pavilion featuring acoustic baffles, live instrumentation stands, and demo product plinths.",
+    "createdAt": "2026-11-10T10:00:00.000Z"
+  },
+  {
+    "id": "work_5",
+    "name": "Amman Granites Architectural Pavilion",
+    "client": "Amman Granites",
+    "place": "HITEX Exhibition Centre, Hyderabad",
+    "date": "January 2025",
+    "time": "4-Day Stone & Build Expo",
+    "size": "12m × 6m (72 sq.m)",
+    "stallType": "Island Pavilion",
+    "image": "/stall/IMG-20250702-WA0053.jpg",
+    "images": [
+      "/stall/IMG-20250702-WA0053.jpg",
+      "/stall/IMG-20250702-WA0054.jpg",
+      "/stall/IMG-20240419-WA0088.jpg"
+    ],
+    "description": "Natural stone cantilever framing with vertical green wall accent, ambient warm LED spotlights, and reinforced slab sample display towers.",
+    "createdAt": "2026-11-10T10:00:00.000Z"
+  },
+  {
+    "id": "work_6",
+    "name": "TurboPlus Automotive Innovation Center",
+    "client": "TurboPlus Systems",
+    "place": "Bombay Exhibition Centre (NESCO), Mumbai",
+    "date": "February 2025",
+    "time": "4-Day Auto Expo",
+    "size": "9m × 6m (54 sq.m)",
+    "stallType": "Modular Booth",
+    "image": "/stall/IMG-20250702-WA0054.jpg",
+    "images": [
+      "/stall/IMG-20250702-WA0054.jpg",
+      "/stall/IMG-20240419-WA0082.jpg",
+      "/stall/IMG-20250702-WA0053.jpg"
+    ],
+    "description": "Sleek aerodynamic curved fascia, dynamic back-lit product shadowboxes, and rapid 24-hour setup and dismantle engineering.",
+    "createdAt": "2026-11-10T10:00:00.000Z"
+  }
+]

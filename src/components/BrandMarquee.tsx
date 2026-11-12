@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState, useCallback } from "react";
-import { brandLogos, BrandLogo } from "@/data/brandLogos";
+import { brandLogos, BrandLogo, resolveBrandLogoSrc } from "@/data/brandLogos";
 
 export const BrandMarquee: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -14,9 +14,26 @@ export const BrandMarquee: React.FC = () => {
   const hasMoved = useRef<boolean>(false);
 
   const [isGrabbed, setIsGrabbed] = useState<boolean>(false);
+  const [activeLogos, setActiveLogos] = useState<BrandLogo[]>(brandLogos);
+
+  useEffect(() => {
+    fetch("/api/brands")
+      .then((res) => (res.ok ? res.json() : null))
+      .then((data) => {
+        if (Array.isArray(data) && data.length > 0) {
+          const mapped = data.map((b: any, idx: number) => ({
+            id: b.id || idx + 1,
+            src: resolveBrandLogoSrc(b, idx),
+            alt: `Brand Partner ${idx + 1}`,
+          }));
+          setActiveLogos(mapped);
+        }
+      })
+      .catch(() => {});
+  }, []);
 
   // Triple set for completely seamless, gap-free infinite scrolling & dragging
-  const logos = [...brandLogos, ...brandLogos, ...brandLogos];
+  const logos = [...activeLogos, ...activeLogos, ...activeLogos];
 
   // Recalculate set width accurately
   const recalculateWidth = useCallback(() => {

@@ -20,7 +20,9 @@ export function Header() {
       <div className="mx-auto mt-4 max-w-7xl px-4">
         <div className="glass rounded-2xl flex items-center justify-between px-4 py-3 md:px-6">
           <Link to="/" className="flex items-center gap-3">
-            <BirdAnimation className="h-8 md:h-10 w-auto" speedMs={45} />
+            <div id="navbar-bird-wrapper" className="transition-opacity duration-300">
+              <BirdAnimation className="h-8 md:h-10 w-auto" speedMs={45} />
+            </div>
             <span className="font-display font-bold text-base md:text-xl leading-tight whitespace-nowrap">
               <span className="text-muted-foreground">The</span>{" "}
               <span className="text-gradient-warm">First Step</span>{" "}
@@ -34,7 +36,10 @@ export function Header() {
                 key={n.to}
                 to={n.to}
                 className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors rounded-full"
-                activeProps={{ className: "px-4 py-2 text-sm font-semibold text-foreground rounded-full bg-white/5" }}
+                activeProps={{
+                  className:
+                    "px-4 py-2 text-sm font-semibold text-foreground rounded-full bg-white/5",
+                }}
               >
                 {n.label}
               </Link>
@@ -51,7 +56,10 @@ export function Header() {
               <span className="inline-flex items-center gap-2 rounded-full bg-background/80 backdrop-blur px-4 py-2 text-sm font-semibold text-foreground group-hover:bg-background/60 transition-colors">
                 <span className="h-2 w-2 rounded-full bg-[#3da86c] animate-pulse" />
                 Go to the Tree
-                <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                <ArrowUpRight
+                  size={16}
+                  className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                />
               </span>
             </a>
             <Link
@@ -93,7 +101,10 @@ export function Header() {
               <span className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-background/80 backdrop-blur px-5 py-3 text-sm font-semibold text-foreground group-hover:bg-background/60 transition-colors">
                 <span className="h-2 w-2 rounded-full bg-[#3da86c] animate-pulse" />
                 Go to the Tree
-                <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                <ArrowUpRight
+                  size={16}
+                  className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                />
               </span>
             </a>
             <Link

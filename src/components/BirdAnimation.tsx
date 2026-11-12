@@ -37,4 +37,3 @@ export function BirdAnimation({ className = "h-10 w-10", speedMs = 45 }: BirdAni
     </div>
   );
 }
-

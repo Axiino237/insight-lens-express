@@ -21,7 +21,7 @@ import logo22 from "@/assets/brand logo/WhatsApp Image 2026-09-18 at 12.38.00 PM
 import logo23 from "@/assets/brand logo/WhatsApp Image 2026-09-18 at 12.40.50 PM.jpeg";
 import logo24 from "@/assets/brand logo/WhatsApp Image 2026-09-18 at 12.45.58 PM.jpeg";
 import logo25 from "@/assets/brand logo/WhatsApp Image 2026-09-18 at 12.46.43 PM.jpeg";
-import logo26 from "@/assets/brand logo/WhatsApp Image 2026-09-18 at 12.50.36 PM.png";
+import logo26 from "@/assets/brand logo/rel-logo.webp";
 import logo27 from "@/assets/brand logo/WhatsApp Image 2026-09-18 at 12.52.42 PM.jpeg";
 
 export interface BrandLogo {
@@ -63,7 +63,7 @@ export const brandLogos: BrandLogo[] = [
     id: 8,
     src: logo8,
     alt: "Brand Partner Logo",
-    imageClassName: "scale-[1.08] md:scale-[1.12]",
+    imageClassName: "scale-[1.05] md:scale-[1.1]",
   },
   {
     id: 9,
@@ -84,7 +84,7 @@ export const brandLogos: BrandLogo[] = [
     id: 12,
     src: logo12,
     alt: "Brand Partner Logo",
-    imageClassName: "scale-[1.08] md:scale-[1.12]",
+    imageClassName: "scale-[1.05] md:scale-[1.1]",
   },
   {
     id: 13,
@@ -97,7 +97,7 @@ export const brandLogos: BrandLogo[] = [
     id: 15,
     src: logo15,
     alt: "Brand Partner Logo",
-    imageClassName: "scale-[1.08] md:scale-[1.12]",
+    imageClassName: "scale-[1.05] md:scale-[1.1]",
   },
   {
     id: 16,
@@ -121,7 +121,7 @@ export const brandLogos: BrandLogo[] = [
     id: 19,
     src: logo19,
     alt: "IFAFEA",
-    imageClassName: "scale-[1.08] md:scale-[1.12]",
+    imageClassName: "scale-[1.05] md:scale-[1.1]",
   },
   {
     id: 20,
@@ -163,9 +163,9 @@ export const brandLogos: BrandLogo[] = [
     id: 26,
     src: logo26,
     alt: "REL",
-    cardBg: "#374151",
-    cardClassName: "!bg-[#374151] border-gray-600/40",
-    imageClassName: "scale-[1.08] md:scale-[1.12]",
+
+
+    imageClassName: "scale-[1.05] md:scale-[1.1]",
   },
   {
     id: 27,
@@ -174,3 +174,21 @@ export const brandLogos: BrandLogo[] = [
     imageClassName: "scale-[1.1] md:scale-[1.18]",
   },
 ];
+
+export function resolveBrandLogoSrc(
+  brand?: { id?: string | number; image?: string; src?: string } | null,
+  index = 0
+): string {
+  if (!brand) return brandLogos[0]?.src || "";
+  const imgStr = brand.image || brand.src || "";
+  if (imgStr.startsWith("data:") || imgStr.startsWith("http://") || imgStr.startsWith("https://")) {
+    return imgStr;
+  }
+  if (typeof brand.id === "string" && brand.id.startsWith("brand_")) {
+    const num = parseInt(brand.id.replace("brand_", ""), 10);
+    if (!isNaN(num) && brandLogos[num - 1]) {
+      return brandLogos[num - 1].src;
+    }
+  }
+  return brandLogos[index % brandLogos.length]?.src || imgStr || brandLogos[0].src;
+}

@@ -2,15 +2,15 @@ import React, { useRef, useEffect, useState } from "react";
 
 // 3D Origami Bird Geometry Definition
 const VERTICES = [
-  { x: 0, y: 0.6, z: 0 },       // 0: Head
-  { x: 0.35, y: 0.7, z: 0 },     // 1: Beak
-  { x: -0.7, y: -0.1, z: 0 },    // 2: Tail Tip
-  { x: -0.15, y: 0.1, z: 0 },    // 3: Body Center
-  { x: -0.3, y: 0.5, z: 0.7 },   // 4: Left Wing Tip
-  { x: -0.3, y: 0.5, z: -0.7 },  // 5: Right Wing Tip
-  { x: -0.15, y: -0.4, z: 0 },   // 6: Bottom Body
-  { x: -0.1, y: 0.2, z: 0.3 },   // 7: Left Wing Mid
-  { x: -0.1, y: 0.2, z: -0.3 },  // 8: Right Wing Mid
+  { x: 0, y: 0.6, z: 0 }, // 0: Head
+  { x: 0.35, y: 0.7, z: 0 }, // 1: Beak
+  { x: -0.7, y: -0.1, z: 0 }, // 2: Tail Tip
+  { x: -0.15, y: 0.1, z: 0 }, // 3: Body Center
+  { x: -0.3, y: 0.5, z: 0.7 }, // 4: Left Wing Tip
+  { x: -0.3, y: 0.5, z: -0.7 }, // 5: Right Wing Tip
+  { x: -0.15, y: -0.4, z: 0 }, // 6: Bottom Body
+  { x: -0.1, y: 0.2, z: 0.3 }, // 7: Left Wing Mid
+  { x: -0.1, y: 0.2, z: -0.3 }, // 8: Right Wing Mid
 ];
 
 const EDGES = [
@@ -127,7 +127,7 @@ export function ThreeDModel() {
     const render = () => {
       const w = canvas.width / window.devicePixelRatio;
       const h = canvas.height / window.devicePixelRatio;
-      
+
       // Clean canvas with transparent/glow base
       ctx.clearRect(0, 0, w, h);
 
@@ -163,7 +163,7 @@ export function ThreeDModel() {
         // Perspective Projection calculation
         const focalLength = 3.5;
         const scaleFactor = focalLength / (focalLength + z2);
-        
+
         // Multiplier coordinates
         const multiplier = Math.min(w, h) * 0.45;
         const px = w / 2 + x1 * scaleFactor * multiplier;
@@ -187,10 +187,10 @@ export function ThreeDModel() {
 
         // Gradient line connecting the origami folds
         const lineGrad = ctx.createLinearGradient(p1.x, p1.y, p2.x, p2.y);
-        lineGrad.addColorStop(0, `rgba(255, 140, 45, ${opacity})`);     // Warm Orange
-        lineGrad.addColorStop(0.5, `rgba(255, 61, 133, ${opacity})`);   // Vibrant Magenta
-        lineGrad.addColorStop(1, `rgba(0, 223, 192, ${opacity})`);      // Cyan Beak/Wing
-        
+        lineGrad.addColorStop(0, `rgba(255, 140, 45, ${opacity})`); // Warm Orange
+        lineGrad.addColorStop(0.5, `rgba(255, 61, 133, ${opacity})`); // Vibrant Magenta
+        lineGrad.addColorStop(1, `rgba(0, 223, 192, ${opacity})`); // Cyan Beak/Wing
+
         ctx.strokeStyle = lineGrad;
         ctx.lineWidth = hovered ? 2.2 : 1.6;
         ctx.stroke();
@@ -221,7 +221,7 @@ export function ThreeDModel() {
         const panelGrad = ctx.createLinearGradient(p1.x, p1.y, p3.x, p3.y);
         panelGrad.addColorStop(0, `rgba(255, 61, 133, ${panelOpacity})`);
         panelGrad.addColorStop(1, `rgba(0, 223, 192, ${panelOpacity * 0.4})`);
-        
+
         ctx.fillStyle = panelGrad;
         ctx.fill();
       });
@@ -234,20 +234,24 @@ export function ThreeDModel() {
         // Glow aura
         ctx.beginPath();
         ctx.arc(p.x, p.y, size * 2.5, 0, Math.PI * 2);
-        ctx.fillStyle = idx === 1 ? `rgba(0, 223, 192, ${opacity * 0.35})` : `rgba(255, 61, 133, ${opacity * 0.25})`;
+        ctx.fillStyle =
+          idx === 1
+            ? `rgba(0, 223, 192, ${opacity * 0.35})`
+            : `rgba(255, 61, 133, ${opacity * 0.25})`;
         ctx.fill();
 
         // Inner solid node
         ctx.beginPath();
         ctx.arc(p.x, p.y, size, 0, Math.PI * 2);
-        ctx.fillStyle = idx === 1 ? `rgba(0, 223, 192, ${opacity})` : `rgba(255, 255, 255, ${opacity})`;
+        ctx.fillStyle =
+          idx === 1 ? `rgba(0, 223, 192, ${opacity})` : `rgba(255, 255, 255, ${opacity})`;
         ctx.fill();
       });
 
       // Render orbiting space particles
       particles.forEach((part) => {
         part.angle += part.speed;
-        
+
         // Transform particle coordinate using autoAngleY rotation
         const partX = Math.cos(part.angle) * part.radius;
         const partZ = Math.sin(part.angle) * part.radius;
@@ -255,16 +259,16 @@ export function ThreeDModel() {
         // Apply rotation transforms matching the bird
         const rX = partX * Math.cos(autoAngleY) - partZ * Math.sin(autoAngleY);
         const rZ = partX * Math.sin(autoAngleY) + partZ * Math.cos(autoAngleY);
-        
+
         const focalLength = 3.5;
         // Map to perspective
-        const scaleFactor = focalLength / (focalLength + (rZ / 300));
-        
+        const scaleFactor = focalLength / (focalLength + rZ / 300);
+
         const px = w / 2 + rX * scaleFactor;
         const py = h / 2 + part.height * scaleFactor;
 
         // Draw particle dot
-        const particleOpacity = Math.max(0.1, Math.min(0.7, 0.8 - (rZ / 300)));
+        const particleOpacity = Math.max(0.1, Math.min(0.7, 0.8 - rZ / 300));
         ctx.beginPath();
         ctx.arc(px, py, part.size * scaleFactor, 0, Math.PI * 2);
         ctx.fillStyle = part.color;
@@ -272,7 +276,7 @@ export function ThreeDModel() {
         ctx.shadowBlur = 4;
         ctx.globalAlpha = particleOpacity;
         ctx.fill();
-        
+
         // Reset canvas shadow properties for subsequent draws
         ctx.shadowBlur = 0;
         ctx.globalAlpha = 1.0;
@@ -306,19 +310,30 @@ export function ThreeDModel() {
     >
       {/* Background soft glowing blur sphere behind canvas */}
       <div className="absolute inset-0 bg-radial-gradient from-brand-magenta/15 to-transparent rounded-full blur-3xl opacity-60 scale-75 -z-10 group-hover:scale-95 transition duration-700 pointer-events-none" />
-      
+
       <canvas
         ref={canvasRef}
         className="w-full h-full object-contain"
         aria-label="Interactive 3D origami bird model"
       />
-      
+
       {/* Interactive Helper Prompt overlay */}
       <div className="absolute bottom-4 inset-x-0 text-center pointer-events-none">
         <span className="inline-flex items-center gap-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur px-3.5 py-1.5 text-xs text-muted-foreground opacity-50 group-hover:opacity-90 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
           <svg className="w-3.5 h-3.5 animate-spin" fill="none" viewBox="0 0 24 24">
-            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+            <circle
+              className="opacity-25"
+              cx="12"
+              cy="12"
+              r="10"
+              stroke="currentColor"
+              strokeWidth="4"
+            ></circle>
+            <path
+              className="opacity-75"
+              fill="currentColor"
+              d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+            ></path>
           </svg>
           Drag to spin bird
         </span>

@@ -28,12 +28,13 @@ function StallLoader() {
         Loading Polystone Compounds
       </h3>
       <p className="text-xs text-muted-foreground mt-2 max-w-xs leading-relaxed">
-        Streaming the 3D Polystone Compounds asset (9.5MB). This may take a moment depending on your disk/connection speed.
+        Streaming the 3D Polystone Compounds asset (9.5MB). This may take a moment depending on your
+        disk/connection speed.
       </p>
-      
+
       {/* Progress bar indicator */}
       <div className="mt-5 h-1.5 w-48 overflow-hidden rounded-full bg-white/10">
-        <div 
+        <div
           className="h-full rounded-full bg-gradient-warm transition-all duration-300"
           style={{ width: `${progress}%` }}
         />
@@ -67,14 +68,16 @@ class ThreeErrorBoundary extends React.Component<
           <div className="h-12 w-12 rounded-full bg-destructive/10 text-destructive flex items-center justify-center mb-4">
             ⚠️
           </div>
-          <h3 className="font-display font-bold text-lg text-foreground">Failed to render 3D Model</h3>
+          <h3 className="font-display font-bold text-lg text-foreground">
+            Failed to render 3D Model
+          </h3>
           <p className="text-sm text-muted-foreground mt-2 max-w-md">
             The 3D model could not be rendered, possibly due to GPU limits or file loading issues.
           </p>
           <pre className="mt-4 p-3 bg-black/40 rounded-lg text-xs text-brand-magenta max-w-lg overflow-auto">
             {this.state.error?.message || "WebGL Context Error"}
           </pre>
-          <button 
+          <button
             onClick={() => this.setState({ hasError: false, error: null })}
             className="mt-6 px-5 py-2 text-xs font-semibold rounded-full bg-gradient-warm text-white hover:opacity-90 transition"
           >
@@ -100,7 +103,9 @@ export function StallModel() {
     return (
       <div className="relative w-full h-[450px] md:h-[600px] rounded-3xl overflow-hidden glass border border-white/10 flex flex-col items-center justify-center p-6 bg-card/30">
         <div className="h-10 w-10 rounded-full border-4 border-brand-cyan/20 border-t-brand-cyan animate-spin" />
-        <span className="text-xs text-muted-foreground mt-4 font-medium">Preparing 3D environment...</span>
+        <span className="text-xs text-muted-foreground mt-4 font-medium">
+          Preparing 3D environment...
+        </span>
       </div>
     );
   }
@@ -111,27 +116,28 @@ export function StallModel() {
         {/* Ambient backglow */}
         <div className="absolute inset-0 bg-radial-gradient from-brand-cyan/5 via-transparent to-transparent pointer-events-none -z-10" />
 
-        <Canvas 
-          camera={{ position: [8, 8, 8], fov: 45 }} 
+        <Canvas
+          camera={{ position: [8, 8, 8], fov: 45 }}
           dpr={[1, 1.5]}
           gl={{ antialias: true, alpha: true }}
         >
-          <Suspense fallback={<Html center><StallLoader /></Html>}>
+          <Suspense
+            fallback={
+              <Html center>
+                <StallLoader />
+              </Html>
+            }
+          >
             {/* Automatic studio lighting setup */}
-            <Stage 
-              intensity={0.7} 
-              environment="city" 
-              adjustCamera={1.3} 
-              shadows="contact"
-            >
+            <Stage intensity={0.7} environment="city" adjustCamera={1.3} shadows="contact">
               <Model />
             </Stage>
             {/* Interactive orbit controls */}
-            <OrbitControls 
-              makeDefault 
-              enableZoom={true} 
-              minDistance={2} 
-              maxDistance={50} 
+            <OrbitControls
+              makeDefault
+              enableZoom={true}
+              minDistance={2}
+              maxDistance={50}
               enableDamping={true}
               dampingFactor={0.05}
             />

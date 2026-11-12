@@ -1,10 +1,6 @@
 import React from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import {
-  Outlet,
-  Link,
-  createRootRouteWithContext,
-} from "@tanstack/react-router";
+import { Outlet, Link, createRootRouteWithContext } from "@tanstack/react-router";
 import { BirdAnimation } from "../components/BirdAnimation";
 import logo from "../assets/logo.png";
 
@@ -92,7 +88,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "publisher", content: "The First Step Solutions" },
       { name: "copyright", content: "The First Step Solutions" },
       // Global: Crawler directives
-      { name: "robots", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
+      {
+        name: "robots",
+        content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      },
       { name: "googlebot", content: "index, follow, max-snippet:-1, max-image-preview:large" },
       { name: "revisit-after", content: "7 days" },
       { name: "rating", content: "general" },

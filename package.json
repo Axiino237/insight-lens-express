@@ -5,6 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite dev",
+    "backend:dev": "npm.cmd --prefix backend run start:dev",
+    "backend:build": "npm.cmd --prefix backend run build",
+    "backend:start": "npm.cmd --prefix backend run start:prod",
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "preview": "vite preview",
