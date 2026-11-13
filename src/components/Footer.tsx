@@ -1,18 +1,29 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, Linkedin, Youtube, Mail, Phone, MapPin, Eye } from "lucide-react";
 import logo from "@/assets/logo.png";
+import { BirdAnimation } from "./BirdAnimation";
 import { useVisitorCount } from "@/hooks/useVisitorCount";
 
 export function Footer() {
   const visitorCount = useVisitorCount();
 
   return (
-    <footer className="relative mt-32 border-t border-border/50">
+    <footer id="main-footer" className="relative mt-32 border-t border-border/50">
       <div className="mx-auto max-w-7xl px-4 py-16">
         <div className="grid gap-12 md:grid-cols-4">
           <div className="md:col-span-2">
             <div className="flex items-center gap-3">
-              <img src={logo} alt="The First Step Solutions" className="h-8 w-auto" />
+              <div
+                id="footer-bird-wrapper"
+                className="relative h-8 w-[57px] flex items-center shrink-0"
+              >
+                <img
+                  id="footer-static-logo"
+                  src={logo}
+                  alt="The First Step Solutions"
+                  className="h-8 w-auto opacity-0 transition-opacity duration-300"
+                />
+              </div>
               <span className="font-display font-bold text-xl">
                 <span className="text-muted-foreground">The</span>{" "}
                 <span className="text-gradient-warm">First Step</span>{" "}

@@ -78,7 +78,7 @@ export const Route = createFileRoute("/")({
     links: [{ rel: "canonical", href: "https://www.thefirststepsolutions.com/" }],
   }),
   component: () => (
-    <Layout>
+    <Layout headerOverlay>
       <Home />
     </Layout>
   ),
@@ -220,7 +220,11 @@ function FeaturedWorkSection() {
 
       <div className="relative z-20 mx-auto max-w-7xl px-4">
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+        <div
+          id="featured-work-bird-zone"
+          data-bird-zone="right"
+          className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16"
+        >
           <div>
             <p className="text-xs uppercase tracking-[0.3em] text-brand-magenta mb-3">
               Featured work
@@ -230,6 +234,7 @@ function FeaturedWorkSection() {
             </h2>
           </div>
           <Link
+            id="featured-work-view-all"
             to="/work"
             className="inline-flex items-center gap-2 text-brand-cyan font-semibold hover:gap-3 transition-all"
           >
@@ -738,10 +743,10 @@ function Home() {
           <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/70 to-background" />
         </div>
 
-        <div className="relative z-20 mx-auto max-w-7xl px-4 pt-6 pb-20 md:pt-10 md:pb-28">
+        <div className="relative z-20 mx-auto max-w-7xl px-4 pt-20 pb-20 md:pt-28 md:pb-28">
           <div className="grid gap-12 lg:grid-cols-12 lg:items-center">
             <div className="lg:col-span-7">
-              <div className="flex items-center gap-2 mb-8">
+              <div className="flex items-center gap-2 mb-6">
                 <span className="h-2 w-2 rounded-full bg-brand-magenta animate-pulse" />
                 <span className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
                   Est. 2022 · Chennai
@@ -751,7 +756,7 @@ function Home() {
               <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-extrabold leading-[0.95] max-w-5xl">
                 We turn <span className="text-gradient-warm">ideas</span>
                 <br />
-                into <span className="text-gradient-brand">experiences</span>
+                into <span id="hero-experiences-anchor" className="text-gradient-brand">experiences</span>
                 <br />
                 that <span className="text-brand-cyan">move people.</span>
               </h1>
@@ -779,7 +784,7 @@ function Home() {
               </div>
             </div>
 
-            <div className="lg:col-span-5 flex justify-center items-center">
+            <div className="lg:col-span-5 flex justify-center items-center lg:self-start lg:pt-2">
               <ThreeDModel />
             </div>
           </div>
@@ -807,9 +812,6 @@ function Home() {
       {/* STALL HERO CAROUSEL (BELOW COVER) */}
       <StallHeroCarousel />
 
-      {/* FEATURED WORK: BENTO GRID WITH HERO STALL */}
-      <FeaturedWorkSection />
-
       {/* CURVED STALL SHOWCASE (STALL SCROLL) */}
       <CurvedStallGallery />
 
@@ -823,6 +825,9 @@ function Home() {
 
       {/* EPPINGER STALL SPOTLIGHT (PNG BOX) */}
       <EppingerSpotlightSection />
+
+      {/* FEATURED WORK: BENTO GRID WITH HERO STALL */}
+      <FeaturedWorkSection />
 
       {/* SERVICES */}
       <section className="relative py-24 md:py-32">
